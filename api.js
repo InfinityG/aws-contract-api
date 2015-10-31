@@ -2,20 +2,22 @@
  * Api Tree
  *
  * Defines the api tree used to deploy resource definitions
- * into the AWS API Gateway
+ * into the AWS API Gateway,
+ *
+ * With associated integration points (lambdas)
  *
  */
 
 module.exports = {
 
-  name: 'The Api Name',
-  description: 'The Api Description',
+  name: 'Contract Api',
+  description: 'Contract Api',
   
   root: {
     _methods: {
       GET: {}
     },
-
+    
     'contracts': {
       _methods: {
         GET: {}

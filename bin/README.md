@@ -6,7 +6,7 @@
 
 `DEBUG=* bin/deploy`
 
-Deploys the api definition in `../api.js`.
+Deploys the api definition in [../api.js`](https://github.com/InfinityG/aws-contract-api/blob/master/api.js)
 
 Has the following configuration requirements.
 
@@ -14,10 +14,10 @@ Has the following configuration requirements.
 
 Requires `.env` file containing variables:
 
-__AWS_ACCOUNT__ - The AWS account to deploy into.
-__AWS_REGION__ - The AWS region to deply into.
+__AWS_ACCOUNT__ - The AWS account to deploy into.<br/>
+__AWS_REGION__ - The AWS region to deply into.<br/>
 
-### per user deployment configuration 
+### per user deployment configuration
 
 Requires `$HOME/.aws/credentials` file contiaing your AWS IAM user profiles.
 
@@ -38,5 +38,5 @@ Requires `.env.$USER` file containing variables:
 
 See `.env.sample`
 
-__AWS_USER__ - Specifies which AWS user in the credentials file to use for the deployment.
+__AWS_USER__ - Specifies which AWS user in the credentials file to use for the deployment.<br/>
 
