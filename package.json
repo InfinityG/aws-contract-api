@@ -1,0 +1,22 @@
+{
+  "name": "aws-contract-api",
+  "private": true,
+  "version": "0.0.0",
+  "description": "contract api",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InfinityG/aws-contract-api.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/InfinityG/aws-contract-api/issues"
+  },
+  "homepage": "https://github.com/InfinityG/aws-contract-api",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
