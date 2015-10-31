@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/InfinityG/aws-contract-api",
   "devDependencies": {
+    "aws4": "^1.1.0",
     "bluebird": "^3.0.2",
     "dotenv": "^1.2.0",
     "dotenv-safe": "^1.0.2",
