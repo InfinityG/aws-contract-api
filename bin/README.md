@@ -4,14 +4,18 @@
 
 ## deploy
 
+`DEBUG=* bin/deploy`
+
+Deploys the api definition in `../api.js`.
+
+Has the following configuration requirements.
+
 ### global deployment configuration
 
 Requires `.env` file containing variables:
 
 __AWS_ACCOUNT__ - The AWS account to deploy into.
 __AWS_REGION__ - The AWS region to deply into.
-
-
 
 ### per user deployment configuration 
 
