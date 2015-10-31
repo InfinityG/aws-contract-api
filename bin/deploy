@@ -17,6 +17,7 @@ var Promise = require('bluebird')
   , awscreds
   , deployuser
   , deploycreds
+  , AwsDeploy = require('aws-deploy')
   ;
 
 
@@ -51,9 +52,16 @@ stat(credfile)
 })
 
 .then(function() {
+  var config = {
+    aws_account: process.env.ALT_AWS_ACCOUNT || process.env.AWS_ACCOUNT,
+    aws_region: process.env.AWS_REGION,
+    aws_access_key_id: deploycreds.aws_access_key_id,
+    aws_secret_access_key: deploycreds.aws_secret_access_key,
+  };
 
-  console.log(process.env);
+  var api = require('../api');
 
+  return AwsDeploy(config, api);
 })
 
 .catch(function(e) {
