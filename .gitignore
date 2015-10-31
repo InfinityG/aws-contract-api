@@ -32,4 +32,4 @@ node_modules/*
 !node_modules/aws-deploy
 
 .env.*
-!.env.username
+!.env.sample
