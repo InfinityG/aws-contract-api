@@ -6,7 +6,7 @@
 
 ### global deployment configuration
 
-#### Requires `.env` file containing variables:
+Requires `.env` file containing variables:
 
 __AWS_ACCOUNT__ - The AWS account to deploy into.
 __AWS_REGION__ - The AWS region to deply into.
@@ -15,7 +15,7 @@ __AWS_REGION__ - The AWS region to deply into.
 
 ### per user deployment configuration 
 
-#### Requires `$HOME/.aws/credentials` file contiaing your AWS IAM user profiles.
+Requires `$HOME/.aws/credentials` file contiaing your AWS IAM user profiles.
 
 eg.
 
@@ -30,7 +30,7 @@ aws_secret_access_key = xxxxxxxxxxxxxx
 
 ```
 
-#### Requires `.env.$USER` file containing variables:
+Requires `.env.$USER` file containing variables:
 
 See `.env.sample`
 
