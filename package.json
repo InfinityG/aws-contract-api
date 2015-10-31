@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/InfinityG/aws-contract-api",
   "devDependencies": {
+    "ini": "^1.3.4",
     "mocha": "^2.3.3"
   }
 }
