@@ -30,3 +30,5 @@ build/Release
 # Some node_modules are part of the local implementation and require selective un-ignoreing
 node_modules/*
 
+.env.*
+!.env.username

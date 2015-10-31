@@ -1,5 +1,5 @@
 # aws-contract-api
 
 * [test](tests/)
-* deploy
+* [deploy](bin/README.md#deploy)
 

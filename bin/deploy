@@ -1,34 +1,64 @@
 #!/usr/bin/env node
 
-var fs = require('fs')
-  , ini = require('ini');
-  , sep = require('path').sep;
+var Promise = require('bluebird')
+  , format = require('util').format
+  , fs = require('fs')
+  , readFile = Promise.promisify(fs.readFile)
+  , stat = Promise.promisify(fs.stat)
+  , ini = require('ini')
+  , osenv = require('osenv')
+  , dotenv = require('dotenv')
+  , dotenvSafe = require('dotenv-safe')
+  , sep = require('path').sep
+  , home = osenv.home()
+  , user = osenv.user()
+  , credfile = home + sep + '.aws' + sep + 'credentials'
+  , userenvfile = '.env.' + user
+  , awscreds
+  , deployuser
+  , deploycreds
+  ;
 
 
-/**
- * 
- * Deply Script uses the same credetials file as the AWS command line tool.
- * 
- * Credentials from any or all your aws IAM users.
- * 
- * eg. 
- * 
- * cat $HOME/.aws/credentials
- * 
- * [username1]
- * aws_access_key_id = XXXXXXXXXXXXXXXXXX
- * aws_secret_access_key = xxxxxxxxxxxxxx
- * 
- * [username2]
- * aws_access_key_id = XXXXXXXXXXXXXXXXXX
- * aws_secret_access_key = xxxxxxxxxxxxxx 
- * 
- */
+stat(credfile)
 
-var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-var credfile = process.env.HOME + sep + '.aws' + sep + 'credentials';
-var awscreds = ini.parse(fs.readFileSync(credfile).toString());
+.then(function() {
+  return readFile(credfile);
+})
 
+.then(function(credfileContent) {
+  awscreds = ini.parse(credfileContent.toString());
+})
 
-console.log(awscreds);
+.then(function() {
+  return stat(userenvfile)
+})
 
+.then(function() {
+  dotenv.load();
+  dotenvSafe.config({path: userenvfile});
+  dotenvSafe.load();
+})
+
+.then(function() {
+  deployuser = process.env.AWS_USER;
+  if (deployuser == '') throw new Error('empty DEPLOY_USER var')
+
+  deploycreds = awscreds[deployuser];
+  if (!deploycreds) throw new Error(format('[%s] not in %s', deployuser, credfile));
+  if (!deploycreds.aws_access_key_id) throw new Error(format('[%s] has no aws_access_key_id in %s', deployuser, credfile));
+  if (!deploycreds.aws_secret_access_key) throw new Error(format('[%s] has no aws_secret_access_key in %s', deployuser, credfile));
+})
+
+.then(function() {
+
+  console.log(process.env);
+
+})
+
+.catch(function(e) {
+  console.error(e.toString());
+  process.exit(e.error || 1);
+})
+
+.finally(function() {})
