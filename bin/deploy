@@ -75,18 +75,20 @@ stat(credfile)
   };
 
   var api = require('../api');
-  var deployed;
+  var previousDeployResult;
 
   try {
-    deployed = require('../api_deployed_' + stage);
-  } catch (e) {}
+    previousDeployResult = require('../api_deployed_' + stage);
+  } catch (e) {
+    // no problem, no previous deployment result present
+  }
 
-  return AwsDeploy(config, api, deployed);
+  return AwsDeploy(config, api, previousDeployResult);
 })
 
-.then(function(deployed) {
+.then(function(deployResult) {
 
-  return writeFile(__dirname + '/../api_deployed_' + stage + '.json', JSON.stringify(deployed, null, 2));
+  return writeFile(__dirname + '/../api_deployed_' + stage + '.json', JSON.stringify(deployResult, null, 2));
 
 })
 

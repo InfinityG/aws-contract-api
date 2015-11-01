@@ -1,10 +1,6 @@
 /** 
- * Api Tree
  *
- * Defines the api tree used to deploy resource definitions
- * into the AWS API Gateway,
- *
- * With associated integration points (lambdas)
+ * `bin/deploy` deploys this to AWS
  *
  */
 
