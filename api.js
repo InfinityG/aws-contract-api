@@ -11,57 +11,37 @@
 module.exports = {
 
   name: 'Contract Api',
+
   description: 'Contract Api',
   
-  root: {
+  routes: {
 
-    // _methods: {
-    //   GET: {}
-    // },
-    
-    'contracts': {
-      _methods: {
-        POST: {},
-        GET: {}
-      },
+    '/contracts': {
+      POST: {},
+      GET: {},
+    },
 
-      '{contract_id}': {
-        _methods: {
-          GET: {}
-        },
+    '/contracts/:contract_id': {
+      GET: {},
+    },
 
-        'conditions': {
+    '/contracts/:contract_id/conditions/:condition_id': {
+      GET: {},
+    },
 
-          '{condition_id}': {
-            _methods: {
-              GET: {}
-            },
+    '/contracts/:contract_id/conditions/:condition_id/signatures': {
+      POST: {},
+    },
 
-            'signatures': {
+    '/contracts/:contract_id/conditions/:condition_id/signatures/:signature_id': {
+      POST: {},
+    },
 
-              _methods: {
-                POST: {}
-              },
 
-              '{signature_id}': {
-                _methods: {
-                  POST: {}
-                }
-              }
-            }
-          }
-        },
-
-        'signatures': {
-
-          '{signature_id}': {
-            
-            _methods: {
-              POST: {}
-            }
-          }
-        }
-      }
+    '/contracts/:contract_id/signatures/:signature_id': {
+      POST: {},
     }
+
   }
+
 }
