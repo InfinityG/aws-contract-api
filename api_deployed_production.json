@@ -15,6 +15,34 @@
       },
       "_deploy": {
         "done": false
+      },
+      "_awsentity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4"
+          },
+          "resource:delete": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4"
+          },
+          "resource:update": {
+            "href": "/restapis/1hjovnyjw0/resources/mlg2i4"
+          }
+        },
+        "id": "mlg2i4",
+        "parentId": "84ludjqxkb",
+        "path": "/contracts",
+        "pathPart": "contracts"
       }
     },
     "/contracts/{contract_id}": {
@@ -25,6 +53,34 @@
       },
       "_deploy": {
         "done": false
+      },
+      "_awsentity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh"
+          },
+          "resource:delete": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh"
+          },
+          "resource:update": {
+            "href": "/restapis/1hjovnyjw0/resources/o6t0mh"
+          }
+        },
+        "id": "o6t0mh",
+        "parentId": "mlg2i4",
+        "path": "/contracts/{contract_id}",
+        "pathPart": "{contract_id}"
       }
     },
     "/contracts/{contract_id}/conditions/{condition_id}": {
@@ -65,6 +121,31 @@
       },
       "_deploy": {
         "done": false
+      }
+    },
+    "/": {
+      "_awsentity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb"
+          },
+          "resource:update": {
+            "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb"
+          }
+        },
+        "id": "84ludjqxkb",
+        "path": "/"
       }
     }
   }
