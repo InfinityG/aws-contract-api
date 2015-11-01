@@ -21,24 +21,23 @@ module.exports = {
       GET: {},
     },
 
-    '/contracts/:contract_id': {
+    '/contracts/{contract_id}': {
       GET: {},
     },
 
-    '/contracts/:contract_id/conditions/:condition_id': {
+    '/contracts/{contract_id}/conditions/{condition_id}': {
       GET: {},
     },
 
-    '/contracts/:contract_id/conditions/:condition_id/signatures': {
+    '/contracts/{contract_id}/conditions/{condition_id}/signatures': {
       POST: {},
     },
 
-    '/contracts/:contract_id/conditions/:condition_id/signatures/:signature_id': {
+    '/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}': {
       POST: {},
     },
 
-
-    '/contracts/:contract_id/signatures/:signature_id': {
+    '/contracts/{contract_id}/signatures/{signature_id}': {
       POST: {},
     }
 
