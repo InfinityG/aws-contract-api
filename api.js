@@ -14,13 +14,53 @@ module.exports = {
   description: 'Contract Api',
   
   root: {
-    _methods: {
-      GET: {}
-    },
+
+    // _methods: {
+    //   GET: {}
+    // },
     
     'contracts': {
       _methods: {
+        POST: {},
         GET: {}
+      },
+
+      '{contract_id}': {
+        _methods: {
+          GET: {}
+        },
+
+        'conditions': {
+
+          '{condition_id}': {
+            _methods: {
+              GET: {}
+            },
+
+            'signatures': {
+
+              _methods: {
+                POST: {}
+              },
+
+              '{signature_id}': {
+                _methods: {
+                  POST: {}
+                }
+              }
+            }
+          }
+        },
+
+        'signatures': {
+
+          '{signature_id}': {
+            
+            _methods: {
+              POST: {}
+            }
+          }
+        }
       }
     }
   }
