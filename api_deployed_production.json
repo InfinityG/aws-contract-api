@@ -14,9 +14,13 @@
         }
       },
       "_deploy": {
-        "done": false
+        "done": true,
+        "created": {
+          "at": "2015-11-01T17:29:02.910Z",
+          "by": "developer"
+        }
       },
-      "_awsentity": {
+      "_aws_entity": {
         "_links": {
           "self": {
             "href": "/restapis/1hjovnyjw0/resources/mlg2i4"
@@ -52,9 +56,13 @@
         }
       },
       "_deploy": {
-        "done": false
+        "done": true,
+        "created": {
+          "at": "2015-11-01T17:29:02.909Z",
+          "by": "developer"
+        }
       },
-      "_awsentity": {
+      "_aws_entity": {
         "_links": {
           "self": {
             "href": "/restapis/1hjovnyjw0/resources/o6t0mh"
@@ -124,7 +132,7 @@
       }
     },
     "/": {
-      "_awsentity": {
+      "_aws_entity": {
         "_links": {
           "self": {
             "href": "/restapis/1hjovnyjw0/resources/84ludjqxkb"
