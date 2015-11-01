@@ -91,7 +91,8 @@ stat(credfile)
 })
 
 .catch(function(e) {
-  console.error(e.stack);
+  if (e.stack) console.error(e.stack)
+  else console.error(e.toString());
   if (e._response) {
     console.error('\nResponse: ' + JSON.stringify(e._response, null, 2));
   }
