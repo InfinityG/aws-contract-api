@@ -1,0 +1,71 @@
+{
+  "name": "Contract Api",
+  "description": "Contract Api",
+  "routes": {
+    "/contracts": {
+      "POST": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "GET": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    },
+    "/contracts/{contract_id}": {
+      "GET": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    },
+    "/contracts/{contract_id}/conditions/{condition_id}": {
+      "GET": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    },
+    "/contracts/{contract_id}/conditions/{condition_id}/signatures": {
+      "POST": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    },
+    "/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}": {
+      "POST": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    },
+    "/contracts/{contract_id}/signatures/{signature_id}": {
+      "POST": {
+        "_deploy": {
+          "done": false
+        }
+      },
+      "_deploy": {
+        "done": false
+      }
+    }
+  }
+}

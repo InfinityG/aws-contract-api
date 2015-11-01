@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-var Promise = require('bluebird')
+var commander = require('commander')
+  , Promise = require('bluebird')
   , format = require('util').format
   , fs = require('fs')
   , readFile = Promise.promisify(fs.readFile)
+  , writeFile = Promise.promisify(fs.writeFile)
   , stat = Promise.promisify(fs.stat)
   , ini = require('ini')
   , osenv = require('osenv')
@@ -19,6 +21,17 @@ var Promise = require('bluebird')
   , deploycreds
   , AwsDeploy = require('aws-deploy')
   ;
+
+var program = commander
+.option('--production', 'Deploy into production stage.')
+.option('--development', 'Deploy into development stage.')
+// .option('--test', 'Deploy into test stage.') ??
+.parse(process.argv);
+
+var stage = 'development';
+
+if (program.production) stage = 'production'
+if (program.development) stage = 'development'
 
 
 stat(credfile)
@@ -57,11 +70,24 @@ stat(credfile)
     aws_region: process.env.AWS_REGION,
     aws_access_key_id: deploycreds.aws_access_key_id,
     aws_secret_access_key: deploycreds.aws_secret_access_key,
+
+    deploy_stage: stage,
   };
 
   var api = require('../api');
+  var deployed;
 
-  return AwsDeploy(config, api);
+  try {
+    deployed = require('../api_deployed_' + stage);
+  } catch (e) {}
+
+  return AwsDeploy(config, api, deployed);
+})
+
+.then(function(deployed) {
+
+  return writeFile(__dirname + '/../api_deployed_' + stage + '.json', JSON.stringify(deployed, null, 2));
+
 })
 
 .catch(function(e) {
