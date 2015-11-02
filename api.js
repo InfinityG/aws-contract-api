@@ -13,17 +13,31 @@ module.exports = {
   routes: {
 
     '/contracts': {
-      POST: {},
-      GET: {},
+      // POST: {},
+      GET: {
+        method: {
+          // apiKeyRequired: true,
+          authorizationType: 'AWS_IAM',
+          requestParameters: {
+            // 'method.request.querystring.XXX': true,
+            'method.request.querystring.YYY': true,
+            'method.request.querystring.ZZZ': true,
+          }
+        }
+      },
     },
 
-    '/contracts/{contract_id}': {
-      GET: {},
-    },
+    // '/contracts/{contract_id}': {
+    //   GET: {},
+    // },
 
-    '/contracts/{contract_id}/conditions/{condition_id}': {
-      GET: {},
-    },
+    // '/contracts/{contract_id}/conditions/{condition_id}': {
+    //   GET: {
+    //     method: {
+    //       apiKeyRequired: true,
+    //     }
+    //   },
+    // },
 
     // '/contracts/{contract_id}/conditions/{condition_id}/signatures': {
     //   POST: {},

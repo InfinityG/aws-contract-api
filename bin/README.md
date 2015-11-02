@@ -4,7 +4,7 @@
 
 ## deploy
 
-`DEBUG=* bin/deploy`
+`bin/deploy`
 
 Deploys the api definition in [../api.js](https://github.com/InfinityG/aws-contract-api/blob/master/api.js)
 

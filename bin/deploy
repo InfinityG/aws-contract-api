@@ -27,17 +27,27 @@ var commander = require('commander')
   ;
 
 var program = commander
-.option('--silent', 'No debug messages.')
-.option('--production', 'Deploy into production stage.')
-.option('--development', 'Deploy into development stage.')
-// .option('--test', 'Deploy into test stage.') ??
+.option('')
+.option('--production',         'Deploy into production stage')
+.option('--development',        'Deploy into development stage')
+.option('--test',               'Deploy into test stage')
+.option('--stage [customName]', 'Deploy into customNamed stage')
+.option('')
+.option('--silent',             'No debug messages')
+.option('--debug',              'All debug messages')
+.option('')
 .parse(process.argv);
 
 var stage = 'development';
 
 if (program.production) stage = 'production';
 if (program.development) stage = 'development';
-if (!program.silent && !process.env.DEBUG) process.env.DEBUG = 'deploy,Deployer*,Api*';
+if (program.test) stage = 'test';
+if (program.stage) stage = program.stage;
+
+if (program.silent) delete process.env.DEBUG
+else if (program.debug && !process.env.DEBUG) process.env.DEBUG = '*'
+else if (!process.env.DEBUG) process.env.DEBUG = 'deploy,Deployer*';
 
 AwsDeploy = require('aws-deploy');
 debug = require('debug')('deploy');

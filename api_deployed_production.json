@@ -3,59 +3,15 @@
   "description": "Contract Api",
   "routes": {
     "/contracts": {
-      "POST": {
-        "method": {
-          "_deploy": {
-            "done": false
-          }
-        },
-        "_aws_entity": {
-          "_links": {
-            "curies": [
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
-                "name": "integration",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
-                "name": "method",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
-                "name": "methodresponse",
-                "templated": true
-              }
-            ],
-            "self": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST",
-              "name": "POST",
-              "title": "POST"
-            },
-            "integration:put": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST/integration"
-            },
-            "method:delete": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST"
-            },
-            "method:update": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST"
-            },
-            "methodresponse:put": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST/responses/{status_code}",
-              "templated": true
-            }
-          },
-          "apiKeyRequired": false,
-          "authorizationType": "NONE",
-          "httpMethod": "POST",
-          "requestModels": {},
-          "requestParameters": {}
-        }
-      },
       "GET": {
         "method": {
+          "authorizationType": "AWS_IAM",
+          "requestParameters": {
+            "method.request.querystring.YYY": true,
+            "method.request.querystring.ZZZ": true
+          },
+          "apiKeyRequired": false,
+          "requestModels": {},
           "_deploy": {
             "done": false
           }
@@ -80,314 +36,95 @@
               }
             ],
             "self": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET",
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET",
               "name": "GET",
               "title": "GET"
             },
             "integration:put": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET/integration"
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration"
             },
             "method:delete": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET"
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET"
             },
             "method:update": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET"
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET"
             },
             "methodresponse:put": {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET/responses/{status_code}",
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/responses/{status_code}",
               "templated": true
             }
           },
           "apiKeyRequired": false,
-          "authorizationType": "NONE",
+          "authorizationType": "AWS_IAM",
           "httpMethod": "GET",
-          "requestModels": {},
-          "requestParameters": {}
+          "requestParameters": {
+            "method.request.querystring.YYY": true,
+            "method.request.querystring.ZZZ": true
+          }
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-02T12:24:09.082Z"
+          "at": "2015-11-02T16:33:43.380Z"
         }
       },
       "_aws_entity": {
         "_links": {
           "self": {
-            "href": "/restapis/as111y7099/resources/5dmtaq"
+            "href": "/restapis/ppfax08eza/resources/whw2rb"
           },
           "method:by-http-method": {
-            "href": "/restapis/as111y7099/resources/5dmtaq/methods/{http_method}",
+            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/{http_method}",
             "templated": true
           },
           "method:put": {
-            "href": "/restapis/as111y7099/resources/5dmtaq/methods/{http_method}",
+            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/{http_method}",
             "templated": true
           },
           "resource:create-child": {
-            "href": "/restapis/as111y7099/resources/5dmtaq"
+            "href": "/restapis/ppfax08eza/resources/whw2rb"
           },
           "resource:delete": {
-            "href": "/restapis/as111y7099/resources/5dmtaq"
+            "href": "/restapis/ppfax08eza/resources/whw2rb"
           },
-          "resource:methods": [
-            {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/POST",
-              "name": "POST",
-              "title": "POST"
-            },
-            {
-              "href": "/restapis/as111y7099/resources/5dmtaq/methods/GET",
-              "name": "GET",
-              "title": "GET"
-            }
-          ],
+          "resource:methods": {
+            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
           "resource:update": {
-            "href": "/restapis/as111y7099/resources/5dmtaq"
+            "href": "/restapis/ppfax08eza/resources/whw2rb"
           }
         },
-        "id": "5dmtaq",
-        "parentId": "qhq793ppe4",
+        "id": "whw2rb",
+        "parentId": "4ijx449hl6",
         "path": "/contracts",
         "pathPart": "contracts"
-      }
-    },
-    "/contracts/{contract_id}": {
-      "GET": {
-        "method": {
-          "_deploy": {
-            "done": false
-          }
-        },
-        "_aws_entity": {
-          "_links": {
-            "curies": [
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
-                "name": "integration",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
-                "name": "method",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
-                "name": "methodresponse",
-                "templated": true
-              }
-            ],
-            "self": {
-              "href": "/restapis/as111y7099/resources/37bm25/methods/GET",
-              "name": "GET",
-              "title": "GET"
-            },
-            "integration:put": {
-              "href": "/restapis/as111y7099/resources/37bm25/methods/GET/integration"
-            },
-            "method:delete": {
-              "href": "/restapis/as111y7099/resources/37bm25/methods/GET"
-            },
-            "method:update": {
-              "href": "/restapis/as111y7099/resources/37bm25/methods/GET"
-            },
-            "methodresponse:put": {
-              "href": "/restapis/as111y7099/resources/37bm25/methods/GET/responses/{status_code}",
-              "templated": true
-            }
-          },
-          "apiKeyRequired": false,
-          "authorizationType": "NONE",
-          "httpMethod": "GET",
-          "requestModels": {},
-          "requestParameters": {}
-        }
-      },
-      "_deploy": {
-        "done": true,
-        "created": {
-          "at": "2015-11-02T12:29:40.889Z"
-        }
-      },
-      "_aws_entity": {
-        "_links": {
-          "self": {
-            "href": "/restapis/as111y7099/resources/37bm25"
-          },
-          "method:by-http-method": {
-            "href": "/restapis/as111y7099/resources/37bm25/methods/{http_method}",
-            "templated": true
-          },
-          "method:put": {
-            "href": "/restapis/as111y7099/resources/37bm25/methods/{http_method}",
-            "templated": true
-          },
-          "resource:create-child": {
-            "href": "/restapis/as111y7099/resources/37bm25"
-          },
-          "resource:delete": {
-            "href": "/restapis/as111y7099/resources/37bm25"
-          },
-          "resource:methods": {
-            "href": "/restapis/as111y7099/resources/37bm25/methods/GET",
-            "name": "GET",
-            "title": "GET"
-          },
-          "resource:update": {
-            "href": "/restapis/as111y7099/resources/37bm25"
-          }
-        },
-        "id": "37bm25",
-        "parentId": "5dmtaq",
-        "path": "/contracts/{contract_id}",
-        "pathPart": "{contract_id}"
-      }
-    },
-    "/contracts/{contract_id}/conditions/{condition_id}": {
-      "GET": {
-        "method": {
-          "_deploy": {
-            "done": false
-          }
-        },
-        "_aws_entity": {
-          "_links": {
-            "curies": [
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
-                "name": "integration",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
-                "name": "method",
-                "templated": true
-              },
-              {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
-                "name": "methodresponse",
-                "templated": true
-              }
-            ],
-            "self": {
-              "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET",
-              "name": "GET",
-              "title": "GET"
-            },
-            "integration:put": {
-              "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET/integration"
-            },
-            "method:delete": {
-              "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET"
-            },
-            "method:update": {
-              "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET"
-            },
-            "methodresponse:put": {
-              "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET/responses/{status_code}",
-              "templated": true
-            }
-          },
-          "apiKeyRequired": false,
-          "authorizationType": "NONE",
-          "httpMethod": "GET",
-          "requestModels": {},
-          "requestParameters": {}
-        }
-      },
-      "_deploy": {
-        "done": true,
-        "created": {
-          "at": "2015-11-02T12:29:40.892Z"
-        }
-      },
-      "_aws_entity": {
-        "_links": {
-          "self": {
-            "href": "/restapis/as111y7099/resources/e1o4qb"
-          },
-          "method:by-http-method": {
-            "href": "/restapis/as111y7099/resources/e1o4qb/methods/{http_method}",
-            "templated": true
-          },
-          "method:put": {
-            "href": "/restapis/as111y7099/resources/e1o4qb/methods/{http_method}",
-            "templated": true
-          },
-          "resource:create-child": {
-            "href": "/restapis/as111y7099/resources/e1o4qb"
-          },
-          "resource:delete": {
-            "href": "/restapis/as111y7099/resources/e1o4qb"
-          },
-          "resource:methods": {
-            "href": "/restapis/as111y7099/resources/e1o4qb/methods/GET",
-            "name": "GET",
-            "title": "GET"
-          },
-          "resource:update": {
-            "href": "/restapis/as111y7099/resources/e1o4qb"
-          }
-        },
-        "id": "e1o4qb",
-        "parentId": "bhxnt9",
-        "path": "/contracts/{contract_id}/conditions/{condition_id}",
-        "pathPart": "{condition_id}"
-      }
-    },
-    "/contracts/{contract_id}/conditions": {
-      "_aws_entity": {
-        "_links": {
-          "self": {
-            "href": "/restapis/as111y7099/resources/bhxnt9"
-          },
-          "method:by-http-method": {
-            "href": "/restapis/as111y7099/resources/bhxnt9/methods/{http_method}",
-            "templated": true
-          },
-          "method:put": {
-            "href": "/restapis/as111y7099/resources/bhxnt9/methods/{http_method}",
-            "templated": true
-          },
-          "resource:create-child": {
-            "href": "/restapis/as111y7099/resources/bhxnt9"
-          },
-          "resource:delete": {
-            "href": "/restapis/as111y7099/resources/bhxnt9"
-          },
-          "resource:update": {
-            "href": "/restapis/as111y7099/resources/bhxnt9"
-          }
-        },
-        "id": "bhxnt9",
-        "parentId": "37bm25",
-        "path": "/contracts/{contract_id}/conditions",
-        "pathPart": "conditions"
       }
     },
     "/": {
       "_aws_entity": {
         "_links": {
           "self": {
-            "href": "/restapis/as111y7099/resources/qhq793ppe4"
+            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
           },
           "method:by-http-method": {
-            "href": "/restapis/as111y7099/resources/qhq793ppe4/methods/{http_method}",
+            "href": "/restapis/ppfax08eza/resources/4ijx449hl6/methods/{http_method}",
             "templated": true
           },
           "method:put": {
-            "href": "/restapis/as111y7099/resources/qhq793ppe4/methods/{http_method}",
+            "href": "/restapis/ppfax08eza/resources/4ijx449hl6/methods/{http_method}",
             "templated": true
           },
           "resource:create-child": {
-            "href": "/restapis/as111y7099/resources/qhq793ppe4"
+            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
           },
           "resource:update": {
-            "href": "/restapis/as111y7099/resources/qhq793ppe4"
+            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
           }
         },
-        "id": "qhq793ppe4",
+        "id": "4ijx449hl6",
         "path": "/"
       }
     }
