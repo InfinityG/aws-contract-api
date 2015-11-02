@@ -30,7 +30,14 @@ module.exports = {
     },
 
     '/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}': {
-      POST: {},
+      POST: {
+        method: {
+          authorizationType: 'XXXXX',
+        //   apiKeyRequired: false,
+        //   requestParameters: {},
+        //   requestModels: {},
+        }
+      },
     },
 
     '/contracts/{contract_id}/signatures/{signature_id}': {

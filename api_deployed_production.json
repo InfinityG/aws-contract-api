@@ -4,19 +4,152 @@
   "routes": {
     "/contracts": {
       "POST": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          },
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestModels": {}
         }
       },
       "GET": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          }
+        },
+        "_aws_entity": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                "name": "integrationresponse",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET"
+            },
+            "method:integration": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration"
+            },
+            "method:responses": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/responses/200",
+              "name": "200",
+              "title": "200"
+            },
+            "method:update": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "NONE",
+          "httpMethod": "GET",
+          "requestParameters": {},
+          "_embedded": {
+            "method:integration": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration"
+                },
+                "integration:delete": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration"
+                },
+                "integration:responses": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration/responses/200",
+                  "name": "200",
+                  "title": "200"
+                },
+                "integration:update": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration"
+                },
+                "integrationresponse:put": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration/responses/{status_code}",
+                  "templated": true
+                }
+              },
+              "cacheKeyParameters": [],
+              "cacheNamespace": "o1uq0t",
+              "httpMethod": "POST",
+              "type": "AWS",
+              "uri": "arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:217750571380:function:HelloWorld/invocations",
+              "_embedded": {
+                "integration:responses": {
+                  "_links": {
+                    "self": {
+                      "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration/responses/200",
+                      "name": "200",
+                      "title": "200"
+                    },
+                    "integrationresponse:delete": {
+                      "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration/responses/200"
+                    },
+                    "integrationresponse:update": {
+                      "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/integration/responses/200"
+                    }
+                  },
+                  "responseTemplates": {
+                    "application/json": null
+                  },
+                  "statusCode": "200"
+                }
+              }
+            },
+            "method:responses": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/responses/200",
+                  "name": "200",
+                  "title": "200"
+                },
+                "methodresponse:delete": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/responses/200"
+                },
+                "methodresponse:update": {
+                  "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET/responses/200"
+                }
+              },
+              "responseModels": {
+                "application/json": "Empty"
+              },
+              "statusCode": "200"
+            }
+          }
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:51.430Z"
         }
       },
       "_aws_entity": {
@@ -38,6 +171,11 @@
           "resource:delete": {
             "href": "/restapis/jl7311xrsa/resources/o1uq0t"
           },
+          "resource:methods": {
+            "href": "/restapis/jl7311xrsa/resources/o1uq0t/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
           "resource:update": {
             "href": "/restapis/jl7311xrsa/resources/o1uq0t"
           }
@@ -50,14 +188,20 @@
     },
     "/contracts/{contract_id}": {
       "GET": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          },
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestModels": {}
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:50.692Z"
         }
       },
       "_aws_entity": {
@@ -91,14 +235,20 @@
     },
     "/contracts/{contract_id}/conditions/{condition_id}": {
       "GET": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          },
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestModels": {}
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:50.692Z"
         }
       },
       "_aws_entity": {
@@ -132,14 +282,88 @@
     },
     "/contracts/{contract_id}/conditions/{condition_id}/signatures": {
       "POST": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          }
+        },
+        "_aws_entity": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST",
+              "name": "POST",
+              "title": "POST"
+            },
+            "integration:put": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST"
+            },
+            "method:responses": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/responses/200",
+              "name": "200",
+              "title": "200"
+            },
+            "method:update": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "NONE",
+          "httpMethod": "POST",
+          "requestParameters": {
+            "method.request.path.contract_id": true,
+            "method.request.path.condition_id": true
+          },
+          "_embedded": {
+            "method:responses": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/responses/200",
+                  "name": "200",
+                  "title": "200"
+                },
+                "methodresponse:delete": {
+                  "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/responses/200"
+                },
+                "methodresponse:update": {
+                  "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST/responses/200"
+                }
+              },
+              "responseModels": {
+                "application/json": "Empty"
+              },
+              "statusCode": "200"
+            }
+          }
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:51.412Z"
         }
       },
       "_aws_entity": {
@@ -161,6 +385,11 @@
           "resource:delete": {
             "href": "/restapis/jl7311xrsa/resources/zxxbtj"
           },
+          "resource:methods": {
+            "href": "/restapis/jl7311xrsa/resources/zxxbtj/methods/POST",
+            "name": "POST",
+            "title": "POST"
+          },
           "resource:update": {
             "href": "/restapis/jl7311xrsa/resources/zxxbtj"
           }
@@ -173,14 +402,20 @@
     },
     "/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}": {
       "POST": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "authorizationType": "XXXXX",
+          "_deploy": {
+            "done": false
+          },
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestModels": {}
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:50.692Z"
         }
       },
       "_aws_entity": {
@@ -214,14 +449,20 @@
     },
     "/contracts/{contract_id}/signatures/{signature_id}": {
       "POST": {
-        "_deploy": {
-          "done": false
+        "method": {
+          "_deploy": {
+            "done": false
+          },
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestParameters": {},
+          "requestModels": {}
         }
       },
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-01T21:48:41.800Z"
+          "at": "2015-11-02T09:54:50.692Z"
         }
       },
       "_aws_entity": {

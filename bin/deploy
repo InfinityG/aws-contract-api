@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+if (!process.env.DEBUG) process.env.DEBUG='deploy,Deployer*'
+
 var commander = require('commander')
   , Promise = require('bluebird')
   , format = require('util').format
@@ -20,6 +22,7 @@ var commander = require('commander')
   , deployuser
   , deploycreds
   , AwsDeploy = require('aws-deploy')
+  , debug = require('debug')('deploy')
   ;
 
 var program = commander
@@ -33,6 +36,7 @@ var stage = 'development';
 if (program.production) stage = 'production'
 if (program.development) stage = 'development'
 
+debug('DEBUG=%s', process.env.DEBUG);
 
 stat(credfile)
 
