@@ -4,7 +4,7 @@
 
 ## deploy
 
-`bin/deploy`
+`bin/deploy -h`
 
 Deploys the api definition in [../api.js](https://github.com/InfinityG/aws-contract-api/blob/master/api.js)
 
@@ -14,7 +14,6 @@ Has the following configuration requirements.
 
 Requires [.env](https://github.com/InfinityG/aws-contract-api/blob/master/.env) file containing variables:
 
-__AWS_ACCOUNT__ - The AWS account to deploy into.<br/>
 __AWS_REGION__ - The AWS region to deply into.<br/>
 
 ### per user deployment configuration

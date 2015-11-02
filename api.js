@@ -13,11 +13,13 @@ module.exports = {
   routes: {
 
     '/contracts': {
-      // POST: {},
+      POST: {
+        integration: {}
+      },
       GET: {
         method: {
           // apiKeyRequired: true,
-          authorizationType: 'AWS_IAM',
+          // authorizationType: 'AWS_IAM',
           requestParameters: {
             // 'method.request.querystring.XXX': true,
             'method.request.querystring.YYY': true,

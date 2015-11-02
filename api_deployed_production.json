@@ -25,6 +25,11 @@
                 "templated": true
               },
               {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                "name": "integrationresponse",
+                "templated": true
+              },
+              {
                 "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
                 "name": "method",
                 "templated": true
@@ -46,6 +51,9 @@
             "method:delete": {
               "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET"
             },
+            "method:integration": {
+              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration"
+            },
             "method:update": {
               "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET"
             },
@@ -60,6 +68,56 @@
           "requestParameters": {
             "method.request.querystring.YYY": true,
             "method.request.querystring.ZZZ": true
+          },
+          "_embedded": {
+            "method:integration": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration"
+                },
+                "integration:delete": {
+                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration"
+                },
+                "integration:responses": {
+                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration/responses/200",
+                  "name": "200",
+                  "title": "200"
+                },
+                "integration:update": {
+                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration"
+                },
+                "integrationresponse:put": {
+                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration/responses/{status_code}",
+                  "templated": true
+                }
+              },
+              "cacheKeyParameters": [],
+              "cacheNamespace": "whw2rb",
+              "httpMethod": "GET",
+              "type": "HTTP",
+              "uri": "https://api.objective.blue",
+              "_embedded": {
+                "integration:responses": {
+                  "_links": {
+                    "self": {
+                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration/responses/200",
+                      "name": "200",
+                      "title": "200"
+                    },
+                    "integrationresponse:delete": {
+                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration/responses/200"
+                    },
+                    "integrationresponse:update": {
+                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/GET/integration/responses/200"
+                    }
+                  },
+                  "responseTemplates": {
+                    "application/json": null
+                  },
+                  "statusCode": "200"
+                }
+              }
+            }
           }
         }
       },

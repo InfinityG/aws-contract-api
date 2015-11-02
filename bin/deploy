@@ -17,7 +17,9 @@ var commander = require('commander')
   , home = osenv.home()
   , user = osenv.user()
   , credfile = home + sep + '.aws' + sep + 'credentials'
-  , userenvfile = '.env.' + user
+  , envfile =  normalize(__dirname + '/../.env')
+  , userenvfile = normalize(__dirname + '/../.env.' + user)
+  , sampleenvfile = normalize(__dirname + '/../.env.sample')
   , awscreds
   , deployuser
   , deploycreds
@@ -72,8 +74,9 @@ stat(credfile)
 })
 
 .then(function() {
+  dotenv.config( /*{path: envfile} */); // barrier to running from other than ../
   dotenv.load();
-  dotenvSafe.config({path: userenvfile});
+  dotenvSafe.config({path: userenvfile /*, sample: sampleenvfile */});
   dotenvSafe.load();
 })
 
