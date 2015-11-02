@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-if (!process.env.DEBUG) process.env.DEBUG='deploy,Deployer*'
-
 var commander = require('commander')
   , Promise = require('bluebird')
   , format = require('util').format
@@ -14,6 +12,8 @@ var commander = require('commander')
   , dotenv = require('dotenv')
   , dotenvSafe = require('dotenv-safe')
   , sep = require('path').sep
+  , normalize = require('path').normalize
+  , relative = require('path').relative
   , home = osenv.home()
   , user = osenv.user()
   , credfile = home + sep + '.aws' + sep + 'credentials'
@@ -21,11 +21,13 @@ var commander = require('commander')
   , awscreds
   , deployuser
   , deploycreds
-  , AwsDeploy = require('aws-deploy')
-  , debug = require('debug')('deploy')
+  , AwsDeploy
+  , apiFile
+  , deployResultFile
   ;
 
 var program = commander
+.option('--silent', 'No debug messages.')
 .option('--production', 'Deploy into production stage.')
 .option('--development', 'Deploy into development stage.')
 // .option('--test', 'Deploy into test stage.') ??
@@ -33,8 +35,15 @@ var program = commander
 
 var stage = 'development';
 
-if (program.production) stage = 'production'
-if (program.development) stage = 'development'
+if (program.production) stage = 'production';
+if (program.development) stage = 'development';
+if (!program.silent && !process.env.DEBUG) process.env.DEBUG = 'deploy,Deployer*,Api*';
+
+AwsDeploy = require('aws-deploy');
+debug = require('debug')('deploy');
+
+apiFile = __dirname + '/../api.js';
+deployResultFile = __dirname + '/../api_deployed_' + stage + '.json';
 
 debug('DEBUG=%s', process.env.DEBUG);
 
@@ -78,11 +87,14 @@ stat(credfile)
     deploy_stage: stage,
   };
 
-  var api = require('../api');
+  debug('loading %s', relative(process.cwd(), apiFile));
+
+  var api = require(apiFile);
   var previousDeployResult;
 
   try {
-    previousDeployResult = require('../api_deployed_' + stage);
+    debug('loading %s', relative(process.cwd(), deployResultFile));
+    previousDeployResult = require(deployResultFile);
   } catch (e) {
     // no problem, no previous deployment result present
   }
@@ -92,8 +104,8 @@ stat(credfile)
 
 .then(function(deployResult) {
 
-  return writeFile(__dirname + '/../api_deployed_' + stage + '.json', JSON.stringify(deployResult, null, 2));
-
+  debug('write %s', relative(process.cwd(), deployResultFile));
+  return writeFile(deployResultFile, JSON.stringify(deployResult, null, 2));
 })
 
 .catch(function(e) {

@@ -25,24 +25,24 @@ module.exports = {
       GET: {},
     },
 
-    '/contracts/{contract_id}/conditions/{condition_id}/signatures': {
-      POST: {},
-    },
+    // '/contracts/{contract_id}/conditions/{condition_id}/signatures': {
+    //   POST: {},
+    // },
 
-    '/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}': {
-      POST: {
-        method: {
-          authorizationType: 'XXXXX',
-        //   apiKeyRequired: false,
-        //   requestParameters: {},
-        //   requestModels: {},
-        }
-      },
-    },
+    // '/contracts/{contract_id}/conditions/{condition_id}/signatures/{signature_id}': {
+    //   POST: {
+    //     method: {
+    //       // authorizationType: 'NONE',
+    //     //   apiKeyRequired: false,
+    //     //   requestParameters: {},
+    //     //   requestModels: {},
+    //     }
+    //   },
+    // },
 
-    '/contracts/{contract_id}/signatures/{signature_id}': {
-      POST: {},
-    }
+    // '/contracts/{contract_id}/signatures/{signature_id}': {
+    //   POST: {},
+    // }
 
   }
 
