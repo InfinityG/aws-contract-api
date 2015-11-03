@@ -5,7 +5,7 @@
 
 ### Notes:
 
-Grant api gateway to invoke lambda
+Grant api gateway permission to invoke lambda
 
 from https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role
 

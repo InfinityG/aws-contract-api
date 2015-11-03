@@ -72,7 +72,7 @@
       "_deploy": {
         "done": true,
         "created": {
-          "at": "2015-11-02T16:33:43.380Z"
+          "at": "2015-11-03T21:34:29.301Z"
         }
       },
       "_aws_entity": {
@@ -134,11 +134,5 @@
         "path": "/"
       }
     }
-  },
-  "deploy": {
-    "app": "contract-api",
-    "version": 0,
-    "stage": "production",
-    "account": "217750571380"
   }
 }

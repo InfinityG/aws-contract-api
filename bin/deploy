@@ -12,12 +12,14 @@ var commander = require('commander')
   , dotenvSafe = require('dotenv-safe')
   , sep = require('path').sep
   , normalize = require('path').normalize
+  , dirname = require('path').dirname
   , relative = require('path').relative
   , home = osenv.home()
   , user = osenv.user()
   , credfile = home + sep + '.aws' + sep + 'credentials'
   , userenvfile
   , sampleenvfile = normalize(__dirname + '/../.env.sample')
+  , mkdirp = Promise.promisify(require('mkdirp'))
   , awscreds
   , deployuser
   , deploycreds
@@ -59,8 +61,6 @@ AwsDeploy = require('aws-deploy');
 debug = require('debug')('Deployer');
 
 apiFile = __dirname + '/../api.js';
-deployResultFile = __dirname + '/../api_deployed_' + stage + '.json';
-
 
 stat(credfile)
 
@@ -103,6 +103,7 @@ stat(credfile)
 
   var api = require(apiFile);
   var previousDeployResult;
+  deployResultFile = normalize(__dirname + '/../.deployed/' + stage + '_' + api.version + '/api.json');
 
   try {
     previousDeployResult = require(deployResultFile);
@@ -115,8 +116,11 @@ stat(credfile)
 
 .then(function(deployResult) {
 
-  debug('write %s', relative(process.cwd(), deployResultFile));
-  return writeFile(deployResultFile, JSON.stringify(deployResult, null, 2));
+  mkdirp(dirname(deployResultFile))
+  .then(function() {
+    debug('write %s', relative(process.cwd(), deployResultFile));
+    return writeFile(deployResultFile, JSON.stringify(deployResult, null, 2));
+  });
 })
 
 .catch(function(e) {
