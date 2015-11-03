@@ -37,7 +37,7 @@ node_modules/*
 api_deployed_*
 !api_deployed_production.json
 
-tmp/*
-!tmp/README.md
+zips/*
+!zips/production
 
 .DS_Store

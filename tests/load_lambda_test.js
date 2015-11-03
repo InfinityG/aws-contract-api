@@ -8,7 +8,11 @@ describe('Load Lambda', function() {
 
     var lambda = new Lambda('api/contracts.js');
 
-    console.log(lambda.base64);
+    // console.log(lambda.base64);
+
+    console.log(lambda.name);
+
+    console.log(lambda.sha256);
 
     done();
 

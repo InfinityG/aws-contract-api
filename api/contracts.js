@@ -18,7 +18,7 @@ exports.handler = function(event, context) {
 
   }).catch(function(error) {
 
-    context.fail('Something went wrong');
+    context.fail('Something went rong');
 
   });
 
