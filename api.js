@@ -6,6 +6,8 @@
 
 module.exports = {
 
+  version: 0,
+
   name: 'Contract Api',
 
   description: 'Contract Api',
@@ -18,17 +20,17 @@ module.exports = {
           lambda: 'api/contracts.js'
         }
       },
-      GET: {
-        method: {
-          // apiKeyRequired: true,
-          // authorizationType: 'AWS_IAM',
-          requestParameters: {
-            // 'method.request.querystring.XXX': true,
-            'method.request.querystring.YYY': true,
-            'method.request.querystring.ZZZ': true,
-          }
-        }
-      },
+      // GET: {
+      //   method: {
+      //     // apiKeyRequired: true,
+      //     // authorizationType: 'AWS_IAM',
+      //     requestParameters: {
+      //       // 'method.request.querystring.XXX': true,
+      //       'method.request.querystring.YYY': true,
+      //       'method.request.querystring.ZZZ': true,
+      //     }
+      //   }
+      // },
     },
 
     // '/contracts/{contract_id}': {

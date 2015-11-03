@@ -38,6 +38,7 @@ api_deployed_*
 !api_deployed_production.json
 
 zips/*
-!zips/production
+!zips/README.md
+!zips/production*
 
 .DS_Store
