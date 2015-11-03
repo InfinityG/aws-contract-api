@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/InfinityG/aws-contract-api",
   "devDependencies": {
+    "adm-zip": "^0.4.7",
     "aws4": "^1.1.0",
     "bluebird": "^3.0.2",
     "commander": "^2.9.0",

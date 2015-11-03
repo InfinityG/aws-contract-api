@@ -14,7 +14,9 @@ module.exports = {
 
     '/contracts': {
       POST: {
-        integration: {}
+        integration: {
+          lambda: 'api/contracts.js'
+        }
       },
       GET: {
         method: {

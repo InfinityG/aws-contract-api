@@ -4,6 +4,8 @@
 
 ## deploy
 
+NB deploy must be run from the project's root directory
+
 `bin/deploy -h`
 
 Deploys the api definition in [../api.js](https://github.com/InfinityG/aws-contract-api/blob/master/api.js)

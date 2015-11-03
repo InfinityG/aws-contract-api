@@ -36,3 +36,8 @@ node_modules/*
 
 api_deployed_*
 !api_deployed_production.json
+
+tmp/*
+!tmp/README.md
+
+.DS_Store
