@@ -103,7 +103,7 @@ stat(credfile)
 
   var api = require(apiFile);
   var previousDeployResult;
-  deployResultFile = normalize(__dirname + '/../.deployed/' + stage + '_' + api.version + '/api.json');
+  deployResultFile = normalize(__dirname + '/../deployed/' + stage + '_' + api.version + '/api.json');
 
   try {
     previousDeployResult = require(deployResultFile);
