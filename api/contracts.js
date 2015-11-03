@@ -1,6 +1,4 @@
-var Promise = require('bluebird')
-  ;
-
+var Promise = require('bluebird');
 var test = require('./models/test');
 
 exports.handler = function(event, context) {

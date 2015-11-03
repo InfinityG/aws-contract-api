@@ -4,9 +4,16 @@
   "description": "Contract Api",
   "routes": {
     "/contracts": {
-      "POST": {
+      "GET": {
         "integration": {
-          "lambda": "api/contracts.js"
+          "lambda": {
+            "file": "api/auth.js",
+            "Handler": "api/auth.handler",
+            "Description": "Description",
+            "MemorySize": 128,
+            "Timeout": 11,
+            "Role": "lambda_basic_execution"
+          }
         },
         "method": {
           "authorizationType": "NONE",
@@ -26,11 +33,6 @@
                 "templated": true
               },
               {
-                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
-                "name": "integrationresponse",
-                "templated": true
-              },
-              {
                 "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
                 "name": "method",
                 "templated": true
@@ -42,83 +44,29 @@
               }
             ],
             "self": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST",
-              "name": "POST",
-              "title": "POST"
+              "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET",
+              "name": "GET",
+              "title": "GET"
             },
             "integration:put": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration"
+              "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET/integration"
             },
             "method:delete": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST"
-            },
-            "method:integration": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration"
+              "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET"
             },
             "method:update": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST"
+              "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET"
             },
             "methodresponse:put": {
-              "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/responses/{status_code}",
+              "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET/responses/{status_code}",
               "templated": true
             }
           },
           "apiKeyRequired": false,
           "authorizationType": "NONE",
-          "httpMethod": "POST",
+          "httpMethod": "GET",
           "requestModels": {},
-          "requestParameters": {},
-          "_embedded": {
-            "method:integration": {
-              "_links": {
-                "self": {
-                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration"
-                },
-                "integration:delete": {
-                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration"
-                },
-                "integration:responses": {
-                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration/responses/200",
-                  "name": "200",
-                  "title": "200"
-                },
-                "integration:update": {
-                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration"
-                },
-                "integrationresponse:put": {
-                  "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration/responses/{status_code}",
-                  "templated": true
-                }
-              },
-              "cacheKeyParameters": [],
-              "cacheNamespace": "whw2rb",
-              "requestTemplates": {
-                "application/json": "{\"statusCode\": 200}"
-              },
-              "type": "MOCK",
-              "_embedded": {
-                "integration:responses": {
-                  "_links": {
-                    "self": {
-                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration/responses/200",
-                      "name": "200",
-                      "title": "200"
-                    },
-                    "integrationresponse:delete": {
-                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration/responses/200"
-                    },
-                    "integrationresponse:update": {
-                      "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST/integration/responses/200"
-                    }
-                  },
-                  "responseTemplates": {
-                    "application/json": null
-                  },
-                  "statusCode": "200"
-                }
-              }
-            }
-          }
+          "requestParameters": {}
         }
       },
       "_deploy": {
@@ -130,33 +78,33 @@
       "_aws_entity": {
         "_links": {
           "self": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb"
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh"
           },
           "method:by-http-method": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/{http_method}",
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/{http_method}",
             "templated": true
           },
           "method:put": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/{http_method}",
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/{http_method}",
             "templated": true
           },
           "resource:create-child": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb"
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh"
           },
           "resource:delete": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb"
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh"
           },
           "resource:methods": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb/methods/POST",
-            "name": "POST",
-            "title": "POST"
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh/methods/GET",
+            "name": "GET",
+            "title": "GET"
           },
           "resource:update": {
-            "href": "/restapis/ppfax08eza/resources/whw2rb"
+            "href": "/restapis/kn1haw54kl/resources/lj6qrh"
           }
         },
-        "id": "whw2rb",
-        "parentId": "4ijx449hl6",
+        "id": "lj6qrh",
+        "parentId": "qew9fxql0m",
         "path": "/contracts",
         "pathPart": "contracts"
       }
@@ -165,26 +113,32 @@
       "_aws_entity": {
         "_links": {
           "self": {
-            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
+            "href": "/restapis/kn1haw54kl/resources/qew9fxql0m"
           },
           "method:by-http-method": {
-            "href": "/restapis/ppfax08eza/resources/4ijx449hl6/methods/{http_method}",
+            "href": "/restapis/kn1haw54kl/resources/qew9fxql0m/methods/{http_method}",
             "templated": true
           },
           "method:put": {
-            "href": "/restapis/ppfax08eza/resources/4ijx449hl6/methods/{http_method}",
+            "href": "/restapis/kn1haw54kl/resources/qew9fxql0m/methods/{http_method}",
             "templated": true
           },
           "resource:create-child": {
-            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
+            "href": "/restapis/kn1haw54kl/resources/qew9fxql0m"
           },
           "resource:update": {
-            "href": "/restapis/ppfax08eza/resources/4ijx449hl6"
+            "href": "/restapis/kn1haw54kl/resources/qew9fxql0m"
           }
         },
-        "id": "4ijx449hl6",
+        "id": "qew9fxql0m",
         "path": "/"
       }
     }
+  },
+  "deploy": {
+    "app": "contract-api",
+    "version": 0,
+    "stage": "production",
+    "account": "217750571380"
   }
 }

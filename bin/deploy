@@ -9,7 +9,6 @@ var commander = require('commander')
   , stat = Promise.promisify(fs.stat)
   , ini = require('ini')
   , osenv = require('osenv')
-  , dotenv = require('dotenv')
   , dotenvSafe = require('dotenv-safe')
   , sep = require('path').sep
   , normalize = require('path').normalize
@@ -17,8 +16,7 @@ var commander = require('commander')
   , home = osenv.home()
   , user = osenv.user()
   , credfile = home + sep + '.aws' + sep + 'credentials'
-  , envfile =  normalize(__dirname + '/../.env')
-  , userenvfile = normalize(__dirname + '/../.env.' + user)
+  , userenvfile
   , sampleenvfile = normalize(__dirname + '/../.env.sample')
   , awscreds
   , deployuser
@@ -29,6 +27,8 @@ var commander = require('commander')
   ;
 
 var program = commander
+.option('')
+.option('--env [alt]',          'Load .env.[alt] instead of .env.$USER')
 .option('')
 .option('--production',         'Deploy into production stage')
 .option('--development',        'Deploy into development stage')
@@ -51,13 +51,16 @@ if (program.silent) delete process.env.DEBUG
 else if (program.debug && !process.env.DEBUG) process.env.DEBUG = '*'
 else if (!process.env.DEBUG) process.env.DEBUG = 'deploy,Deployer*';
 
+if (program.env) user = program.env;
+
+userenvfile = normalize(__dirname + '/../.env.' + user)
+
 AwsDeploy = require('aws-deploy');
-debug = require('debug')('deploy');
+debug = require('debug')('Deployer');
 
 apiFile = __dirname + '/../api.js';
 deployResultFile = __dirname + '/../api_deployed_' + stage + '.json';
 
-debug('DEBUG=%s', process.env.DEBUG);
 
 stat(credfile)
 
@@ -74,9 +77,7 @@ stat(credfile)
 })
 
 .then(function() {
-  dotenv.config( /*{path: envfile} */); // barrier to running from other than ../
-  dotenv.load();
-  dotenvSafe.config({path: userenvfile /*, sample: sampleenvfile */});
+  dotenvSafe.config({path: userenvfile});
   dotenvSafe.load();
 })
 
@@ -92,7 +93,7 @@ stat(credfile)
 
 .then(function() {
   var config = {
-    aws_account: process.env.ALT_AWS_ACCOUNT || process.env.AWS_ACCOUNT,
+    aws_account: process.env.AWS_ACCOUNT,
     aws_region: process.env.AWS_REGION,
     aws_access_key_id: deploycreds.aws_access_key_id,
     aws_secret_access_key: deploycreds.aws_secret_access_key,
@@ -100,13 +101,10 @@ stat(credfile)
     deploy_stage: stage,
   };
 
-  debug('loading %s', relative(process.cwd(), apiFile));
-
   var api = require(apiFile);
   var previousDeployResult;
 
   try {
-    debug('loading %s', relative(process.cwd(), deployResultFile));
     previousDeployResult = require(deployResultFile);
   } catch (e) {
     // no problem, no previous deployment result present
