@@ -1,0 +1,240 @@
+{
+  "version": 0,
+  "name": "Contract Api",
+  "description": "Contract Api",
+  "routes": {
+    "/example": {
+      "GET": {
+        "method": {
+          "authorizationType": "NONE",
+          "apiKeyRequired": true,
+          "requestParameters": {},
+          "requestModels": {},
+          "_deploy": {
+            "done": false
+          }
+        },
+        "integration": {
+          "type": "HTTP",
+          "httpMethod": "GET",
+          "uri": "https://www.google.co.za/",
+          "credentials": null,
+          "requestParameters": {},
+          "requestTemplates": {},
+          "cacheNamespace": null,
+          "cacheKeyParameters": []
+        },
+        "_aws_entity": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET"
+            },
+            "method:update": {
+              "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": true,
+          "authorizationType": "NONE",
+          "httpMethod": "GET",
+          "requestModels": {},
+          "requestParameters": {}
+        }
+      },
+      "_deploy": {
+        "done": true,
+        "created": {
+          "at": "2015-11-04T09:34:40.229Z"
+        }
+      },
+      "_aws_entity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl"
+          },
+          "resource:delete": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl"
+          },
+          "resource:methods": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
+          "resource:update": {
+            "href": "/restapis/wf7wsgzqll/resources/f3n4cl"
+          }
+        },
+        "id": "f3n4cl",
+        "parentId": "7avy6f2yyf",
+        "path": "/example",
+        "pathPart": "example"
+      }
+    },
+    "/contracts": {
+      "GET": {
+        "integration": {
+          "lambda": {
+            "file": "api/auth.js",
+            "Handler": "api/auth.handler"
+          }
+        },
+        "method": {
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestModels": {},
+          "requestParameters": {},
+          "_deploy": {
+            "done": false
+          }
+        },
+        "_aws_entity": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET"
+            },
+            "method:update": {
+              "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "NONE",
+          "httpMethod": "GET",
+          "requestModels": {},
+          "requestParameters": {}
+        }
+      },
+      "_deploy": {
+        "done": true,
+        "created": {
+          "at": "2015-11-04T09:34:43.750Z"
+        }
+      },
+      "_aws_entity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1"
+          },
+          "resource:delete": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1"
+          },
+          "resource:methods": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
+          "resource:update": {
+            "href": "/restapis/wf7wsgzqll/resources/b46mo1"
+          }
+        },
+        "id": "b46mo1",
+        "parentId": "7avy6f2yyf",
+        "path": "/contracts",
+        "pathPart": "contracts"
+      }
+    },
+    "/": {
+      "_aws_entity": {
+        "_links": {
+          "self": {
+            "href": "/restapis/wf7wsgzqll/resources/7avy6f2yyf"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/wf7wsgzqll/resources/7avy6f2yyf/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/wf7wsgzqll/resources/7avy6f2yyf/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/wf7wsgzqll/resources/7avy6f2yyf"
+          },
+          "resource:update": {
+            "href": "/restapis/wf7wsgzqll/resources/7avy6f2yyf"
+          }
+        },
+        "id": "7avy6f2yyf",
+        "path": "/"
+      }
+    }
+  }
+}

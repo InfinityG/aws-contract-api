@@ -21,3 +21,7 @@ aws lambda add-permission \
 
 ```
 
+* step by step
+* required roles
+* versioning strategy
+

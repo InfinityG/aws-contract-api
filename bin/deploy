@@ -129,7 +129,7 @@ stat(credfile)
   if (e._response) {
     console.error('\nResponse: ' + JSON.stringify(e._response, null, 2));
   }
-  process.exit(e.errno || 1);
+  process.exit(1);
 })
 
 .finally(function() {})

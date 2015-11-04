@@ -14,33 +14,55 @@ module.exports = {
   
   routes: {
 
-    '/contracts': {
+    '/example/{moo}': {
       GET: {
-        integration: {
-          lambda: {
-            file: 'api/contracts.js',
-            Handler: 'api/contracts.handler',
-            // file: 'api/auth.js',
-            // Handler: 'api/auth.handler',
-            // Description: 'Description',
-            // MemorySize: 128,
-            // Timeout: 11,
-            // Role: 'lambda_basic_execution',
-          }
-        }
+        method: {
+          authorizationType: 'NONE',
+          apiKeyRequired: true,
+          requestParameters: {},
+          requestModels: {},
+        },
+        // integration: {
+        //   type: 'HTTP',
+        //   httpMethod: 'GET',
+        //   uri: 'https://www.google.co.za/',
+        //   credentials: null,
+        //   requestParameters: {},
+        //   requestTemplates: {},
+        //   cacheNamespace: null,
+        //   cacheKeyParameters: [],
+        // }
       },
-      // GET: {
-      //   method: {
-      //     // apiKeyRequired: true,
-      //     // authorizationType: 'AWS_IAM',
-      //     requestParameters: {
-      //       // 'method.request.querystring.XXX': true,
-      //       'method.request.querystring.YYY': true,
-      //       'method.request.querystring.ZZZ': true,
-      //     }
-      //   }
-      // },
+      // POST: {}
     },
+
+    // '/contracts': {
+    //   // GET: {
+    //   //   integration: {
+    //   //     lambda: {
+    //   //       // file: 'api/contracts.js',
+    //   //       // Handler: 'api/contracts.handler',
+    //   //       file: 'api/auth.js',
+    //   //       Handler: 'api/auth.handler',
+    //   //       // Description: 'Description',
+    //   //       // MemorySize: 128,
+    //   //       // Timeout: 11,
+    //   //       // Role: 'lambda_basic_execution',
+    //   //     }
+    //   //   }
+    //   // },
+    //   // GET: {
+    //   //   method: {
+    //   //     // apiKeyRequired: true,
+    //   //     // authorizationType: 'AWS_IAM',
+    //   //     requestParameters: {
+    //   //       // 'method.request.querystring.XXX': true,
+    //   //       'method.request.querystring.YYY': true,
+    //   //       'method.request.querystring.ZZZ': true,
+    //   //     }
+    //   //   }
+    //   // },
+    // },
 
     // '/contracts/{contract_id}': {
     //   GET: {},
