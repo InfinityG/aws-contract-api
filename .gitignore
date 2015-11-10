@@ -37,9 +37,11 @@ node_modules/*
 api_deployed_*
 !api_deployed_production.json
 
-.deployed/*
-!.deployed/README.md
-!.deployed/production*
-# !.deployed/test*
+deployed/*
+!deployed/README.md
+
+## production deployed as stage 'v' + version number
+!deployed/v*
+# !deployed/test*
 
 .DS_Store

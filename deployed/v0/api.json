@@ -1,0 +1,199 @@
+{
+  "version": 0,
+  "name": "Contract Api",
+  "description": "Contract Api",
+  "routes": {
+    "/": {
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/7ltqe8axk0/resources/7o9rggx97a"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/7ltqe8axk0/resources/7o9rggx97a/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/7ltqe8axk0/resources/7o9rggx97a/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/7ltqe8axk0/resources/7o9rggx97a"
+          },
+          "resource:update": {
+            "href": "/restapis/7ltqe8axk0/resources/7o9rggx97a"
+          }
+        },
+        "id": "7o9rggx97a",
+        "path": "/"
+      }
+    },
+    "/example": {
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn"
+          },
+          "resource:delete": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn"
+          },
+          "resource:update": {
+            "href": "/restapis/7ltqe8axk0/resources/b1ridn"
+          }
+        },
+        "id": "b1ridn",
+        "parentId": "7o9rggx97a",
+        "path": "/example",
+        "pathPart": "example"
+      }
+    },
+    "/example/{moo}": {
+      "GET": {
+        "method": {
+          "authorizationType": "NONE",
+          "apiKeyRequired": true,
+          "requestParameters": {
+            "method.request.path.moo": true
+          },
+          "requestModels": {},
+          "_log": {}
+        },
+        "integration": {
+          "type": "HTTP",
+          "httpMethod": "GET",
+          "uri": "https://www.google.co.za",
+          "credentials": null,
+          "requestParameters": {},
+          "requestTemplates": {},
+          "cacheNamespace": null,
+          "cacheKeyParameters": [],
+          "_log": {}
+        },
+        "_aws": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                "name": "integrationresponse",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET"
+            },
+            "method:integration": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration"
+            },
+            "method:update": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": true,
+          "authorizationType": "NONE",
+          "httpMethod": "GET",
+          "requestModels": {},
+          "requestParameters": {
+            "method.request.path.moo": true
+          },
+          "_embedded": {
+            "method:integration": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration"
+                },
+                "integration:delete": {
+                  "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration"
+                },
+                "integration:update": {
+                  "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration"
+                },
+                "integrationresponse:put": {
+                  "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET/integration/responses/{status_code}",
+                  "templated": true
+                }
+              },
+              "cacheKeyParameters": [],
+              "cacheNamespace": "e133bh",
+              "httpMethod": "GET",
+              "requestParameters": {},
+              "requestTemplates": {},
+              "type": "HTTP",
+              "uri": "https://www.google.co.za"
+            }
+          }
+        }
+      },
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh"
+          },
+          "resource:delete": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh"
+          },
+          "resource:methods": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
+          "resource:update": {
+            "href": "/restapis/7ltqe8axk0/resources/e133bh"
+          }
+        },
+        "id": "e133bh",
+        "parentId": "b1ridn",
+        "path": "/example/{moo}",
+        "pathPart": "{moo}"
+      }
+    }
+  }
+}

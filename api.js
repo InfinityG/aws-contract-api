@@ -22,16 +22,16 @@ module.exports = {
           requestParameters: {},
           requestModels: {},
         },
-        // integration: {
-        //   type: 'HTTP',
-        //   httpMethod: 'GET',
-        //   uri: 'https://www.google.co.za/',
-        //   credentials: null,
-        //   requestParameters: {},
-        //   requestTemplates: {},
-        //   cacheNamespace: null,
-        //   cacheKeyParameters: [],
-        // }
+        integration: {
+          type: 'HTTP',
+          httpMethod: 'GET',
+          uri: 'https://www.google.co.za',
+          credentials: null,
+          requestParameters: {},
+          requestTemplates: {},
+          cacheNamespace: null,
+          cacheKeyParameters: [],
+        }
       },
       // POST: {}
     },

@@ -44,7 +44,7 @@ var program = commander
 
 var stage = 'development';
 
-if (program.production) stage = 'production';
+if (program.production) stage = 'v';
 if (program.development) stage = 'development';
 if (program.test) stage = 'test';
 if (program.stage) stage = program.stage;
@@ -103,7 +103,7 @@ stat(credfile)
 
   var api = require(apiFile);
   var previousDeployResult;
-  deployResultFile = normalize(__dirname + '/../deployed/' + stage + '_' + api.version + '/api.json');
+  deployResultFile = normalize(__dirname + '/../deployed/' + stage + '' + api.version + '/api.json');
 
   try {
     previousDeployResult = require(deployResultFile);
