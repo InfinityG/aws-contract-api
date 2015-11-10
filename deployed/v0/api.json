@@ -8,16 +8,23 @@
       "GET": {
         "integration": {
           "lambda": {
-            "file": "api/auth.js",
-            "Handler": "api/auth.handler"
+            "file": "api/contracts.js",
+            "Handler": "api/contracts.handler"
           },
-          "type": "HTTP",
+          "type": "AWS",
           "httpMethod": "GET",
-          "uri": "http://www.example.com",
+          "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--contracts_js/invocations",
           "requestParameters": {},
           "requestTemplates": {},
           "cacheKeyParameters": [],
-          "_log": {}
+          "_log": {
+            "created": {
+              "at": "2015-11-10T15:17:05.435Z"
+            },
+            "updated": {
+              "at": "2015-11-10T15:20:55.387Z"
+            }
+          }
         },
         "method": {
           "authorizationType": "NONE",
@@ -29,7 +36,7 @@
               "at": "2015-11-10T14:24:24.703Z"
             },
             "updated": {
-              "at": "2015-11-10T14:30:05.817Z"
+              "at": "2015-11-10T15:20:51.060Z"
             }
           }
         }
@@ -50,7 +57,7 @@
               "at": "2015-11-10T14:20:55.341Z"
             },
             "updated": {
-              "at": "2015-11-10T14:21:48.956Z"
+              "at": "2015-11-10T15:20:51.033Z"
             }
           }
         },
@@ -68,7 +75,7 @@
               "at": "2015-11-10T13:41:23.540Z"
             },
             "updated": {
-              "at": "2015-11-10T14:07:40.594Z"
+              "at": "2015-11-10T15:20:51.988Z"
             }
           }
         }

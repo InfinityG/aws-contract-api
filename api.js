@@ -36,33 +36,33 @@ module.exports = {
       // POST: {}
     },
 
-    // '/contracts': {
-    //   // GET: {
-    //   //   integration: {
-    //   //     lambda: {
-    //   //       // file: 'api/contracts.js',
-    //   //       // Handler: 'api/contracts.handler',
-    //   //       file: 'api/auth.js',
-    //   //       Handler: 'api/auth.handler',
-    //   //       // Description: 'Description',
-    //   //       // MemorySize: 128,
-    //   //       // Timeout: 11,
-    //   //       // Role: 'lambda_basic_execution',
-    //   //     }
-    //   //   }
-    //   // },
-    //   // GET: {
-    //   //   method: {
-    //   //     // apiKeyRequired: true,
-    //   //     // authorizationType: 'AWS_IAM',
-    //   //     requestParameters: {
-    //   //       // 'method.request.querystring.XXX': true,
-    //   //       'method.request.querystring.YYY': true,
-    //   //       'method.request.querystring.ZZZ': true,
-    //   //     }
-    //   //   }
-    //   // },
-    // },
+    '/contracts': {
+      GET: {
+        integration: {
+          lambda: {
+            file: 'api/contracts.js',
+            Handler: 'api/contracts.handler',
+            // file: 'api/auth.js',
+            // Handler: 'api/auth.handler',
+            // Description: 'Description',
+            // MemorySize: 128,
+            // Timeout: 11,
+            // Role: 'lambda_basic_execution',
+          }
+        }
+      },
+      // GET: {
+      //   method: {
+      //     // apiKeyRequired: true,
+      //     // authorizationType: 'AWS_IAM',
+      //     requestParameters: {
+      //       // 'method.request.querystring.XXX': true,
+      //       'method.request.querystring.YYY': true,
+      //       'method.request.querystring.ZZZ': true,
+      //     }
+      //   }
+      // },
+    },
 
     // '/contracts/{contract_id}': {
     //   GET: {},
