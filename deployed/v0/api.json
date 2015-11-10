@@ -4,26 +4,43 @@
   "description": "Contract Api",
   "routes": {
     "/": {},
-    "/contracts": {
+    "/contracts": {},
+    "/contracts/deeper": {
       "GET": {
         "integration": {
           "lambda": {
-            "file": "api/contracts.js",
-            "Handler": "api/contracts.handler"
+            "file": "api/auth.js",
+            "Handler": "api/auth.handler"
           },
           "type": "AWS",
           "httpMethod": "GET",
-          "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--contracts_js/invocations",
+          "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--auth_js/invocations",
           "requestParameters": {},
           "requestTemplates": {},
           "cacheKeyParameters": [],
           "_log": {
             "created": {
-              "at": "2015-11-10T15:17:05.435Z"
-            },
-            "updated": {
-              "at": "2015-11-10T15:20:55.387Z"
+              "at": "2015-11-10T19:50:17.352Z"
             }
+          },
+          "_permission": {
+            "Condition": {
+              "StringEquals": {
+                "AWS:SourceAccount": "217750571380"
+              },
+              "ArnLike": {
+                "AWS:SourceArn": "arn:aws:apigateway:eu-west-1::g6ar5vlbi8:/contracts/deeper"
+              }
+            },
+            "Action": [
+              "lambda:InvokeFunction"
+            ],
+            "Resource": "arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--auth_js",
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "apigateway.amazonaws.com"
+            },
+            "Sid": "bea642e81a1c33dc903e6e1b66eddc5f"
           }
         },
         "method": {
@@ -33,10 +50,7 @@
           "requestParameters": {},
           "_log": {
             "created": {
-              "at": "2015-11-10T14:24:24.703Z"
-            },
-            "updated": {
-              "at": "2015-11-10T15:20:51.060Z"
+              "at": "2015-11-10T19:50:08.789Z"
             }
           }
         }
@@ -54,10 +68,7 @@
           "requestModels": {},
           "_log": {
             "created": {
-              "at": "2015-11-10T14:20:55.341Z"
-            },
-            "updated": {
-              "at": "2015-11-10T15:20:51.033Z"
+              "at": "2015-11-10T19:50:09.102Z"
             }
           }
         },
@@ -72,10 +83,7 @@
           "cacheKeyParameters": [],
           "_log": {
             "created": {
-              "at": "2015-11-10T13:41:23.540Z"
-            },
-            "updated": {
-              "at": "2015-11-10T15:20:51.988Z"
+              "at": "2015-11-10T19:50:09.889Z"
             }
           }
         }
