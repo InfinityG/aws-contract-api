@@ -18,24 +18,80 @@
           "templated": true
         },
         "self": {
-          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
         },
         "deployment:delete": {
-          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
         },
         "deployment:stages": {
-          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=nowi7n"
+          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=x18rb7"
         },
         "deployment:update": {
-          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
         }
       },
-      "createdDate": "2015-11-11T12:44:39Z",
-      "id": "nowi7n"
+      "createdDate": "2015-11-11T15:19:46Z",
+      "id": "x18rb7"
     },
     "_log": {
       "created": {
-        "at": "2015-11-11T12:44:39.070Z"
+        "at": "2015-11-11T15:19:47.277Z"
+      }
+    }
+  },
+  "models": {
+    "ModelName": {
+      "description": "The description of the Model",
+      "contentType": "application/json",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "title": "Model Name Schema",
+        "type": "object",
+        "properties": {
+          "key1": {
+            "type": "string"
+          },
+          "key2": {
+            "type": "boolean"
+          }
+        }
+      },
+      "_log": {
+        "created": {
+          "at": "2015-11-11T15:15:05.832Z"
+        },
+        "updated": {
+          "at": "2015-11-11T15:19:42.291Z"
+        }
+      },
+      "_aws": {
+        "_links": {
+          "curies": {
+            "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-model-{rel}.html",
+            "name": "model",
+            "templated": true
+          },
+          "self": {
+            "href": "/restapis/3fzo0qw4l2/models/ModelName?flatten=false"
+          },
+          "model:create": {
+            "href": "/restapis/3fzo0qw4l2/models"
+          },
+          "model:delete": {
+            "href": "/restapis/3fzo0qw4l2/models/ModelName"
+          },
+          "model:generate-template": {
+            "href": "/restapis/3fzo0qw4l2/models/ModelName/default_template"
+          },
+          "model:update": {
+            "href": "/restapis/3fzo0qw4l2/models/ModelName"
+          }
+        },
+        "contentType": "application/json",
+        "description": "The description of the Model",
+        "id": "pujovc",
+        "name": "ModelName",
+        "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Model Name Schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"key1\": {\n      \"type\": \"string\"\n    },\n    \"key2\": {\n      \"type\": \"boolean\"\n    }\n  }\n}"
       }
     }
   },
@@ -81,43 +137,10 @@
           "_log": {
             "created": {
               "at": "2015-11-11T12:44:36.688Z"
-            }
-          },
-          "_aws": {
-            "_links": {
-              "curies": [
-                {
-                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
-                  "name": "integration",
-                  "templated": true
-                },
-                {
-                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
-                  "name": "integrationresponse",
-                  "templated": true
-                }
-              ],
-              "self": {
-                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
-              },
-              "integration:delete": {
-                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
-              },
-              "integration:update": {
-                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
-              },
-              "integrationresponse:put": {
-                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration/responses/{status_code}",
-                "templated": true
-              }
             },
-            "cacheKeyParameters": [],
-            "cacheNamespace": "oa14qx",
-            "httpMethod": "GET",
-            "requestParameters": {},
-            "requestTemplates": {},
-            "type": "AWS",
-            "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--test_js/invocations"
+            "updated": {
+              "at": "2015-11-11T13:03:34.513Z"
+            }
           },
           "_permission": {
             "Condition": {
@@ -146,6 +169,82 @@
               "at": "2015-11-11T12:44:30.731Z"
             }
           }
+        },
+        "_aws": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                "name": "integrationresponse",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET"
+            },
+            "method:integration": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+            },
+            "method:update": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "NONE",
+          "httpMethod": "GET",
+          "requestModels": {},
+          "requestParameters": {},
+          "_embedded": {
+            "method:integration": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+                },
+                "integration:delete": {
+                  "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+                },
+                "integration:update": {
+                  "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+                },
+                "integrationresponse:put": {
+                  "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration/responses/{status_code}",
+                  "templated": true
+                }
+              },
+              "cacheKeyParameters": [],
+              "cacheNamespace": "oa14qx",
+              "httpMethod": "GET",
+              "type": "AWS",
+              "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--test_js/invocations"
+            }
+          }
         }
       },
       "_aws": {
@@ -167,13 +266,13 @@
           "resource:delete": {
             "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
           },
-          "resource:update": {
-            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
-          },
           "resource:methods": {
             "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET",
             "name": "GET",
             "title": "GET"
+          },
+          "resource:update": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
           }
         },
         "id": "oa14qx",

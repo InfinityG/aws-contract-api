@@ -20,7 +20,26 @@ module.exports = {
     cacheClusterSize: '0.5',   // [58.2, 13.5, 28.4, 237, 0.5, 118, 6.1, 1.6]
   },
 
+  models: {
 
+    'ModelName': {
+      description: 'The description of the Model',
+      contentType: 'application/json',
+      schema: {
+        title: 'Model Name Schema',
+        type: 'object',
+        properties: {
+          'key1': {
+            type: 'string'
+          },
+          'key2': {
+            type: 'boolean'
+          }
+        }
+      }
+    },
+
+  },
   
   routes: {
 
