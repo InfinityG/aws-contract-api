@@ -18,80 +18,124 @@
           "templated": true
         },
         "self": {
-          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
+          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
         },
         "deployment:delete": {
-          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
+          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
         },
         "deployment:stages": {
-          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=x18rb7"
+          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=fga446"
         },
         "deployment:update": {
-          "href": "/restapis/3fzo0qw4l2/deployments/x18rb7"
+          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
         }
       },
-      "createdDate": "2015-11-11T15:19:46Z",
-      "id": "x18rb7"
+      "createdDate": "2015-11-11T15:38:30Z",
+      "id": "fga446"
     },
     "_log": {
       "created": {
-        "at": "2015-11-11T15:19:47.277Z"
+        "at": "2015-11-11T15:38:30.728Z"
       }
     }
   },
   "models": {
-    "ModelName": {
-      "description": "The description of the Model",
+    "ExampleRequestModel": {
+      "description": "Example model for resuests",
       "contentType": "application/json",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
-        "title": "Model Name Schema",
+        "title": "Example Request Model",
         "type": "object",
         "properties": {
-          "key1": {
+          "astring": {
             "type": "string"
           },
-          "key2": {
+          "aboolean": {
             "type": "boolean"
+          },
+          "anumber": {
+            "type": "number"
           }
         }
       },
       "_log": {
         "created": {
-          "at": "2015-11-11T15:15:05.832Z"
-        },
-        "updated": {
-          "at": "2015-11-11T15:19:42.291Z"
+          "at": "2015-11-11T15:30:59.388Z"
         }
       },
       "_aws": {
         "_links": {
-          "curies": {
-            "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-model-{rel}.html",
-            "name": "model",
-            "templated": true
-          },
           "self": {
-            "href": "/restapis/3fzo0qw4l2/models/ModelName?flatten=false"
+            "href": "/restapis/3fzo0qw4l2/models/ExampleRequestModel?flatten=false"
           },
           "model:create": {
             "href": "/restapis/3fzo0qw4l2/models"
           },
           "model:delete": {
-            "href": "/restapis/3fzo0qw4l2/models/ModelName"
+            "href": "/restapis/3fzo0qw4l2/models/ExampleRequestModel"
           },
           "model:generate-template": {
-            "href": "/restapis/3fzo0qw4l2/models/ModelName/default_template"
+            "href": "/restapis/3fzo0qw4l2/models/ExampleRequestModel/default_template"
           },
           "model:update": {
-            "href": "/restapis/3fzo0qw4l2/models/ModelName"
+            "href": "/restapis/3fzo0qw4l2/models/ExampleRequestModel"
           }
         },
         "contentType": "application/json",
-        "description": "The description of the Model",
-        "id": "pujovc",
-        "name": "ModelName",
-        "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Model Name Schema\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"key1\": {\n      \"type\": \"string\"\n    },\n    \"key2\": {\n      \"type\": \"boolean\"\n    }\n  }\n}"
+        "description": "Example model for resuests",
+        "id": "1o3mur",
+        "name": "ExampleRequestModel",
+        "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Example Request Model\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"astring\": {\n      \"type\": \"string\"\n    },\n    \"aboolean\": {\n      \"type\": \"boolean\"\n    },\n    \"anumber\": {\n      \"type\": \"number\"\n    }\n  }\n}"
+      }
+    },
+    "ExampleResponseModel": {
+      "description": "Example model for responses",
+      "contentType": "application/json",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "title": "Example Response Model",
+        "type": "object",
+        "properties": {
+          "astring": {
+            "type": "string"
+          },
+          "aboolean": {
+            "type": "boolean"
+          },
+          "anumber": {
+            "type": "number"
+          }
+        }
+      },
+      "_log": {
+        "created": {
+          "at": "2015-11-11T15:30:59.419Z"
+        }
+      },
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/3fzo0qw4l2/models/ExampleResponseModel?flatten=false"
+          },
+          "model:create": {
+            "href": "/restapis/3fzo0qw4l2/models"
+          },
+          "model:delete": {
+            "href": "/restapis/3fzo0qw4l2/models/ExampleResponseModel"
+          },
+          "model:generate-template": {
+            "href": "/restapis/3fzo0qw4l2/models/ExampleResponseModel/default_template"
+          },
+          "model:update": {
+            "href": "/restapis/3fzo0qw4l2/models/ExampleResponseModel"
+          }
+        },
+        "contentType": "application/json",
+        "description": "Example model for responses",
+        "id": "sadlif",
+        "name": "ExampleResponseModel",
+        "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Example Response Model\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"astring\": {\n      \"type\": \"string\"\n    },\n    \"aboolean\": {\n      \"type\": \"boolean\"\n    },\n    \"anumber\": {\n      \"type\": \"number\"\n    }\n  }\n}"
       }
     }
   },

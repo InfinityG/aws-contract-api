@@ -22,18 +22,41 @@ module.exports = {
 
   models: {
 
-    'ModelName': {
-      description: 'The description of the Model',
+    'ExampleRequestModel': {
+      description: 'Example model for resuests',
       contentType: 'application/json',
       schema: {
-        title: 'Model Name Schema',
+        title: 'Example Request Model',
         type: 'object',
         properties: {
-          'key1': {
+          'astring': {
             type: 'string'
           },
-          'key2': {
+          'aboolean': {
             type: 'boolean'
+          },
+          'anumber': {
+            type: 'number'
+          }
+        }
+      }
+    },
+
+    'ExampleResponseModel': {
+      description: 'Example model for responses',
+      contentType: 'application/json',
+      schema: {
+        title: 'Example Response Model',
+        type: 'object',
+        properties: {
+          'astring': {
+            type: 'string'
+          },
+          'aboolean': {
+            type: 'boolean'
+          },
+          'anumber': {
+            type: 'number'
           }
         }
       }
