@@ -23,7 +23,7 @@ module.exports = {
   models: {
 
     'ExampleRequestModel': {
-      description: 'Example model for resuests',
+      description: 'Example model for resuests.',
       contentType: 'application/json',
       schema: {
         title: 'Example Request Model',

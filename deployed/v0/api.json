@@ -4,12 +4,20 @@
   "description": "Contract Api",
   "deployment": {
     "url": "https://3fzo0qw4l2.execute-api.eu-west-1.amazonaws.com/v0",
+    "stageName": "v0",
     "variables": {
       "test": "1"
     },
     "cacheClusterEnabled": "false",
     "cacheClusterSize": "0.5",
-    "stageName": "v0",
+    "_log": {
+      "created": {
+        "at": "2015-11-11T15:41:24.913Z"
+      },
+      "updated": {
+        "at": "2015-11-11T15:45:30.368Z"
+      }
+    },
     "_aws": {
       "_links": {
         "curies": {
@@ -18,30 +26,25 @@
           "templated": true
         },
         "self": {
-          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
+          "href": "/restapis/3fzo0qw4l2/deployments/111xgw"
         },
         "deployment:delete": {
-          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
+          "href": "/restapis/3fzo0qw4l2/deployments/111xgw"
         },
         "deployment:stages": {
-          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=fga446"
+          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=111xgw"
         },
         "deployment:update": {
-          "href": "/restapis/3fzo0qw4l2/deployments/fga446"
+          "href": "/restapis/3fzo0qw4l2/deployments/111xgw"
         }
       },
-      "createdDate": "2015-11-11T15:38:30Z",
-      "id": "fga446"
-    },
-    "_log": {
-      "created": {
-        "at": "2015-11-11T15:38:30.728Z"
-      }
+      "createdDate": "2015-11-11T15:45:29Z",
+      "id": "111xgw"
     }
   },
   "models": {
     "ExampleRequestModel": {
-      "description": "Example model for resuests",
+      "description": "Example model for resuests.",
       "contentType": "application/json",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
@@ -62,6 +65,9 @@
       "_log": {
         "created": {
           "at": "2015-11-11T15:30:59.388Z"
+        },
+        "updated": {
+          "at": "2015-11-11T15:41:20.252Z"
         }
       },
       "_aws": {
@@ -83,7 +89,7 @@
           }
         },
         "contentType": "application/json",
-        "description": "Example model for resuests",
+        "description": "Example model for resuests.",
         "id": "1o3mur",
         "name": "ExampleRequestModel",
         "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Example Request Model\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"astring\": {\n      \"type\": \"string\"\n    },\n    \"aboolean\": {\n      \"type\": \"boolean\"\n    },\n    \"anumber\": {\n      \"type\": \"number\"\n    }\n  }\n}"
