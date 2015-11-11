@@ -22,27 +22,27 @@ module.exports = {
     }
   },
 
-  '/examples/{example_id}': {
-    POST: {
-      method: {
-        // authorizationType: 'NONE',
-        // apiKeyRequired: false,
-        // requestParameters: {},
-        // requestModels: {},
-        requestModels: {
-          'application/json': 'ExampleRequestModel'
-        }
-      },
-      integration: {
-        lambda: {
-          file: 'api/example.js',
-          Handler: 'api/example.post',
-        }
-      }
-    }
-  }
+  // '/examples/{example_id}': {
+  //   POST: {
+  //     method: {
+  //       // authorizationType: 'NONE',
+  //       // apiKeyRequired: false,
+  //       // requestParameters: {},
+  //       // requestModels: {},
+  //       requestModels: {
+  //         'application/json': 'ExampleRequestModel'
+  //       }
+  //     },
+  //     integration: {
+  //       lambda: {
+  //         file: 'api/example.js',
+  //         Handler: 'api/example.post',
+  //       }
+  //     }
+  //   }
+  // },
 
-  // '/example/{moo}': {
+  // '/example': {
   //   GET: {
   //     method: {
   //       authorizationType: 'NONE',

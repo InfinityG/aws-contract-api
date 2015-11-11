@@ -19,7 +19,8 @@ module.exports = {
         'anumber': {
           type: 'number'
         }
-      }
+      },
+      required: ['astring']
     }
   },
 
