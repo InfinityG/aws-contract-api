@@ -116,11 +116,17 @@ stat(credfile)
 
 .then(function(deployResult) {
 
-  mkdirp(dirname(deployResultFile))
+  return mkdirp(dirname(deployResultFile))
   .then(function() {
     debug('write %s', relative(process.cwd(), deployResultFile));
     return writeFile(deployResultFile, JSON.stringify(deployResult, null, 2));
-  });
+  })
+  .then(function() {
+    return writeFile(deployResultFile.replace(/.json$/, '.url'), deployResult.deployment.url);
+  })
+  .then(function() {
+    debug(deployResult.deployment.url);
+  })
 })
 
 .catch(function(e) {

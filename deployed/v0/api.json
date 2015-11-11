@@ -2,10 +2,187 @@
   "version": 0,
   "name": "Contract Api",
   "description": "Contract Api",
+  "deployment": {
+    "url": "https://3fzo0qw4l2.execute-api.eu-west-1.amazonaws.com/v0",
+    "variables": {
+      "test": "1"
+    },
+    "cacheClusterEnabled": "false",
+    "cacheClusterSize": "0.5",
+    "stageName": "v0",
+    "_aws": {
+      "_links": {
+        "curies": {
+          "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-deployment-{rel}.html",
+          "name": "deployment",
+          "templated": true
+        },
+        "self": {
+          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+        },
+        "deployment:delete": {
+          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+        },
+        "deployment:stages": {
+          "href": "/restapis/3fzo0qw4l2/stages?deployment_id=nowi7n"
+        },
+        "deployment:update": {
+          "href": "/restapis/3fzo0qw4l2/deployments/nowi7n"
+        }
+      },
+      "createdDate": "2015-11-11T12:44:39Z",
+      "id": "nowi7n"
+    },
+    "_log": {
+      "created": {
+        "at": "2015-11-11T12:44:39.070Z"
+      }
+    }
+  },
   "routes": {
-    "/": {},
-    "/contracts": {},
-    "/contracts/deeper": {
+    "/": {
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6"
+          },
+          "resource:update": {
+            "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6"
+          }
+        },
+        "id": "pddlhuj4b6",
+        "path": "/"
+      }
+    },
+    "/test": {
+      "GET": {
+        "integration": {
+          "lambda": {
+            "file": "api/test.js",
+            "Handler": "api/test.handler"
+          },
+          "type": "AWS",
+          "httpMethod": "GET",
+          "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--test_js/invocations",
+          "requestParameters": {},
+          "requestTemplates": {},
+          "cacheKeyParameters": [],
+          "_log": {
+            "created": {
+              "at": "2015-11-11T12:44:36.688Z"
+            }
+          },
+          "_aws": {
+            "_links": {
+              "curies": [
+                {
+                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                  "name": "integration",
+                  "templated": true
+                },
+                {
+                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                  "name": "integrationresponse",
+                  "templated": true
+                }
+              ],
+              "self": {
+                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+              },
+              "integration:delete": {
+                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+              },
+              "integration:update": {
+                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration"
+              },
+              "integrationresponse:put": {
+                "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET/integration/responses/{status_code}",
+                "templated": true
+              }
+            },
+            "cacheKeyParameters": [],
+            "cacheNamespace": "oa14qx",
+            "httpMethod": "GET",
+            "requestParameters": {},
+            "requestTemplates": {},
+            "type": "AWS",
+            "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--test_js/invocations"
+          },
+          "_permission": {
+            "Condition": {
+              "ArnLike": {
+                "AWS:SourceArn": "arn:aws:apigateway:eu-west-1::3fzo0qw4l2:/test"
+              }
+            },
+            "Action": [
+              "lambda:InvokeFunction"
+            ],
+            "Resource": "arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--test_js",
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "apigateway.amazonaws.com"
+            },
+            "Sid": "0956d22591e144163844cc9c00923093"
+          }
+        },
+        "method": {
+          "authorizationType": "NONE",
+          "apiKeyRequired": false,
+          "requestModels": {},
+          "requestParameters": {},
+          "_log": {
+            "created": {
+              "at": "2015-11-11T12:44:30.731Z"
+            }
+          }
+        }
+      },
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
+          },
+          "resource:delete": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
+          },
+          "resource:update": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx"
+          },
+          "resource:methods": {
+            "href": "/restapis/3fzo0qw4l2/resources/oa14qx/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          }
+        },
+        "id": "oa14qx",
+        "parentId": "pddlhuj4b6",
+        "path": "/test",
+        "pathPart": "test"
+      }
+    },
+    "/test2": {
       "GET": {
         "integration": {
           "lambda": {
@@ -20,16 +197,13 @@
           "cacheKeyParameters": [],
           "_log": {
             "created": {
-              "at": "2015-11-10T19:50:17.352Z"
+              "at": "2015-11-11T09:11:58.420Z"
             }
           },
           "_permission": {
             "Condition": {
-              "StringEquals": {
-                "AWS:SourceAccount": "217750571380"
-              },
               "ArnLike": {
-                "AWS:SourceArn": "arn:aws:apigateway:eu-west-1::g6ar5vlbi8:/contracts/deeper"
+                "AWS:SourceArn": "arn:aws:apigateway:eu-west-1::3fzo0qw4l2:/test2"
               }
             },
             "Action": [
@@ -40,7 +214,7 @@
             "Principal": {
               "Service": "apigateway.amazonaws.com"
             },
-            "Sid": "bea642e81a1c33dc903e6e1b66eddc5f"
+            "Sid": "400bea27724a114d11b0d96a120be49c"
           }
         },
         "method": {
@@ -50,44 +224,182 @@
           "requestParameters": {},
           "_log": {
             "created": {
-              "at": "2015-11-10T19:50:08.789Z"
-            }
-          }
-        }
-      }
-    },
-    "/example": {},
-    "/example/{moo}": {
-      "GET": {
-        "method": {
-          "authorizationType": "NONE",
-          "apiKeyRequired": true,
-          "requestParameters": {
-            "method.request.path.moo": true
-          },
-          "requestModels": {},
-          "_log": {
-            "created": {
-              "at": "2015-11-10T19:50:09.102Z"
+              "at": "2015-11-11T09:11:53.979Z"
             }
           }
         },
-        "integration": {
-          "type": "HTTP",
+        "_aws": {
+          "_links": {
+            "curies": [
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
+                "name": "integration",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                "name": "integrationresponse",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
+                "name": "method",
+                "templated": true
+              },
+              {
+                "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-response-{rel}.html",
+                "name": "methodresponse",
+                "templated": true
+              }
+            ],
+            "self": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET",
+              "name": "GET",
+              "title": "GET"
+            },
+            "integration:put": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration"
+            },
+            "method:delete": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET"
+            },
+            "method:integration": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration"
+            },
+            "method:update": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET"
+            },
+            "methodresponse:put": {
+              "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/responses/{status_code}",
+              "templated": true
+            }
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "NONE",
           "httpMethod": "GET",
-          "uri": "https://www.google.co.za",
-          "credentials": null,
+          "requestModels": {},
           "requestParameters": {},
-          "requestTemplates": {},
-          "cacheNamespace": null,
-          "cacheKeyParameters": [],
-          "_log": {
-            "created": {
-              "at": "2015-11-10T19:50:09.889Z"
+          "_embedded": {
+            "method:integration": {
+              "_links": {
+                "self": {
+                  "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration"
+                },
+                "integration:delete": {
+                  "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration"
+                },
+                "integration:update": {
+                  "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration"
+                },
+                "integrationresponse:put": {
+                  "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET/integration/responses/{status_code}",
+                  "templated": true
+                }
+              },
+              "cacheKeyParameters": [],
+              "cacheNamespace": "qjaua5",
+              "httpMethod": "GET",
+              "requestParameters": {},
+              "requestTemplates": {},
+              "type": "AWS",
+              "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--auth_js/invocations"
             }
           }
         }
+      },
+      "_aws": {
+        "_links": {
+          "self": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5"
+          },
+          "method:by-http-method": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/{http_method}",
+            "templated": true
+          },
+          "method:put": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/{http_method}",
+            "templated": true
+          },
+          "resource:create-child": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5"
+          },
+          "resource:delete": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5"
+          },
+          "resource:methods": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5/methods/GET",
+            "name": "GET",
+            "title": "GET"
+          },
+          "resource:update": {
+            "href": "/restapis/3fzo0qw4l2/resources/qjaua5"
+          }
+        },
+        "id": "qjaua5",
+        "parentId": "pddlhuj4b6",
+        "path": "/test2",
+        "pathPart": "test2"
       }
     }
+  },
+  "_aws": {
+    "_links": {
+      "self": {
+        "href": "/restapis/3fzo0qw4l2"
+      },
+      "deployment:by-id": {
+        "href": "/restapis/3fzo0qw4l2/deployments/{deployment_id}{?embed}",
+        "templated": true
+      },
+      "deployment:create": {
+        "href": "/restapis/3fzo0qw4l2/deployments"
+      },
+      "model:by-name": {
+        "href": "/restapis/3fzo0qw4l2/models/{model_name}?flatten=false",
+        "templated": true
+      },
+      "model:create": {
+        "href": "/restapis/3fzo0qw4l2/models"
+      },
+      "resource:by-id": {
+        "href": "/restapis/3fzo0qw4l2/resources/{resource_id}{?embed}",
+        "templated": true
+      },
+      "resource:create": {
+        "href": "/restapis/3fzo0qw4l2/resources/pddlhuj4b6"
+      },
+      "restapi:delete": {
+        "href": "/restapis/3fzo0qw4l2"
+      },
+      "restapi:deployments": {
+        "href": "/restapis/3fzo0qw4l2/deployments{?limit}",
+        "templated": true
+      },
+      "restapi:models": {
+        "href": "/restapis/3fzo0qw4l2/models"
+      },
+      "restapi:resources": {
+        "href": "/restapis/3fzo0qw4l2/resources{?limit,embed}",
+        "templated": true
+      },
+      "restapi:stages": {
+        "href": "/restapis/3fzo0qw4l2/stages{?deployment_id}",
+        "templated": true
+      },
+      "restapi:update": {
+        "href": "/restapis/3fzo0qw4l2"
+      },
+      "stage:by-name": {
+        "href": "/restapis/3fzo0qw4l2/stages/{stage_name}",
+        "templated": true
+      },
+      "stage:create": {
+        "href": "/restapis/3fzo0qw4l2/stages"
+      }
+    },
+    "createdDate": "2015-11-11T08:54:59Z",
+    "description": "Contract Api",
+    "id": "3fzo0qw4l2",
+    "name": "Contract Api"
   }
 }

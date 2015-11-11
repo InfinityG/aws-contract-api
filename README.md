@@ -11,13 +11,13 @@ from https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#la
 
 ```
 aws lambda add-permission \
---region us-west-2 \
---function-name helloworld \
---statement-id 5 \
+--region eu-west-1 \
+--function-name v0--contract-api--api--test_js \
+--statement-id xxx \
 --principal apigateway.amazonaws.com \
 --action lambda:InvokeFunction \
---source-arn arn:aws:apigateway:us-east-1::my-api-id:/test/petstorewalkthrough/pets \
---profile adminuser
+--source-arn arn:aws:apigateway:eu-west-1::3fzo0qw4l2:/test \
+--profile developer
 
 ```
 
