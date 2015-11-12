@@ -11,7 +11,25 @@ module.exports = {
         // requestModels: {},
         requestModels: {
           'application/json': 'ExampleRequestModel'
+        },
+
+        responses: {
+          200: {
+            responseModels: {
+              'application/json': 'ExampleResponseModel'
+            },
+            responseParameters: {
+              'method.response.header.xxx-response-header': false,
+              'method.response.header.xxx-more': false
+            }
+          },
+          400: {
+            responseModels: {
+              'application/json': 'Error'
+            }
+          },
         }
+
       },
       integration: {
         lambda: {
@@ -19,7 +37,9 @@ module.exports = {
           Handler: 'api/example.put',
         }
       }
-    }
+    },
+
+    GET: {}
   },
 
   // '/examples/{example_id}': {
