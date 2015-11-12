@@ -15,12 +15,12 @@ module.exports = {
 
         responses: {
           200: {
-            responseModels: {
-              'application/json': 'ExampleResponseModel'
-            },
             responseParameters: {
               'method.response.header.xxx-response-header': false,
               'method.response.header.xxx-more': false
+            },
+            responseModels: {
+              'application/json': 'ExampleResponseModel'
             }
           },
           400: {
@@ -35,6 +35,23 @@ module.exports = {
         lambda: {
           file: 'api/example.js',
           Handler: 'api/example.put',
+        },
+        responses: {
+          200: {
+            responseParameters: {
+              'method.response.header.xxx-response-header': 'integration.response.header.xxx',
+              'method.response.header.xxx-more': 'integration.response.header.more'
+            },
+            responseTemplates: {
+              'application/json': null
+            }
+          },
+          400: {
+            selectionPattern: 'Ex*',
+            responseTemplates: {
+              'application/json': null
+            }
+          }
         }
       }
     },

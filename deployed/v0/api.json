@@ -10,6 +10,14 @@
     },
     "cacheClusterEnabled": "false",
     "cacheClusterSize": "0.5",
+    "_log": {
+      "created": {
+        "at": "2015-11-12T17:12:54.923Z"
+      },
+      "updated": {
+        "at": "2015-11-12T21:27:13.384Z"
+      }
+    },
     "_aws": {
       "_links": {
         "curies": {
@@ -18,25 +26,20 @@
           "templated": true
         },
         "self": {
-          "href": "/restapis/h5mw6hmp26/deployments/mf9lgu"
+          "href": "/restapis/h5mw6hmp26/deployments/exarnd"
         },
         "deployment:delete": {
-          "href": "/restapis/h5mw6hmp26/deployments/mf9lgu"
+          "href": "/restapis/h5mw6hmp26/deployments/exarnd"
         },
         "deployment:stages": {
-          "href": "/restapis/h5mw6hmp26/stages?deployment_id=mf9lgu"
+          "href": "/restapis/h5mw6hmp26/stages?deployment_id=exarnd"
         },
         "deployment:update": {
-          "href": "/restapis/h5mw6hmp26/deployments/mf9lgu"
+          "href": "/restapis/h5mw6hmp26/deployments/exarnd"
         }
       },
-      "createdDate": "2015-11-12T17:12:54Z",
-      "id": "mf9lgu"
-    },
-    "_log": {
-      "created": {
-        "at": "2015-11-12T17:12:54.923Z"
-      }
+      "createdDate": "2015-11-12T21:27:13Z",
+      "id": "exarnd"
     }
   },
   "models": {
@@ -106,14 +109,13 @@
           }
         }
       },
-      "name": "ExampleResponseModel",
+      "_log": {
+        "created": {
+          "at": "2015-11-12T17:12:43.777Z"
+        }
+      },
       "_aws": {
         "_links": {
-          "curies": {
-            "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-model-{rel}.html",
-            "name": "model",
-            "templated": true
-          },
           "self": {
             "href": "/restapis/h5mw6hmp26/models/ExampleResponseModel?flatten=false"
           },
@@ -135,11 +137,6 @@
         "id": "jglnlq",
         "name": "ExampleResponseModel",
         "schema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"title\": \"Example Response Model\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"astring\": {\n      \"type\": \"string\"\n    },\n    \"aboolean\": {\n      \"type\": \"boolean\"\n    },\n    \"anumber\": {\n      \"type\": \"number\"\n    }\n  }\n}"
-      },
-      "_log": {
-        "created": {
-          "at": "2015-11-12T17:12:43.777Z"
-        }
       }
     }
   },
@@ -177,17 +174,19 @@
           },
           "responses": {
             "200": {
-              "responseModels": {
-                "application/json": "ExampleResponseModel"
-              },
               "responseParameters": {
                 "method.response.header.xxx-response-header": false,
                 "method.response.header.xxx-more": false
               },
-              "statusCode": "200",
+              "responseModels": {
+                "application/json": "ExampleResponseModel"
+              },
               "_log": {
                 "created": {
                   "at": "2015-11-12T17:12:46.982Z"
+                },
+                "updated": {
+                  "at": "2015-11-12T21:27:10.231Z"
                 }
               }
             },
@@ -195,10 +194,12 @@
               "responseModels": {
                 "application/json": "Error"
               },
-              "statusCode": "400",
               "_log": {
                 "created": {
                   "at": "2015-11-12T17:12:47.015Z"
+                },
+                "updated": {
+                  "at": "2015-11-12T21:27:10.231Z"
                 }
               }
             }
@@ -223,6 +224,11 @@
                   "templated": true
                 },
                 {
+                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
+                  "name": "integrationresponse",
+                  "templated": true
+                },
+                {
                   "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
                   "name": "method",
                   "templated": true
@@ -244,6 +250,21 @@
               "method:delete": {
                 "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT"
               },
+              "method:integration": {
+                "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
+              },
+              "method:responses": [
+                {
+                  "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/200",
+                  "name": "200",
+                  "title": "200"
+                },
+                {
+                  "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/400",
+                  "name": "400",
+                  "title": "400"
+                }
+              ],
               "method:update": {
                 "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT"
               },
@@ -258,13 +279,136 @@
             "requestModels": {
               "application/json": "ExampleRequestModel"
             },
-            "requestParameters": {}
+            "requestParameters": {},
+            "_embedded": {
+              "method:integration": {
+                "_links": {
+                  "self": {
+                    "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
+                  },
+                  "integration:delete": {
+                    "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
+                  },
+                  "integration:responses": {
+                    "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/200",
+                    "name": "200",
+                    "title": "200"
+                  },
+                  "integration:update": {
+                    "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
+                  },
+                  "integrationresponse:put": {
+                    "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/{status_code}",
+                    "templated": true
+                  }
+                },
+                "cacheKeyParameters": [],
+                "cacheNamespace": "vuv1hy",
+                "httpMethod": "PUT",
+                "requestParameters": {},
+                "requestTemplates": {},
+                "type": "AWS",
+                "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put/invocations",
+                "_embedded": {
+                  "integration:responses": {
+                    "_links": {
+                      "self": {
+                        "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/200",
+                        "name": "200",
+                        "title": "200"
+                      },
+                      "integrationresponse:delete": {
+                        "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/200"
+                      },
+                      "integrationresponse:update": {
+                        "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/200"
+                      }
+                    },
+                    "responseParameters": {
+                      "method.response.header.xxx-more": "integration.response.header.more",
+                      "method.response.header.xxx-response-header": "integration.response.header.xxx"
+                    },
+                    "responseTemplates": {
+                      "application/json": null
+                    },
+                    "statusCode": "200"
+                  }
+                }
+              },
+              "method:responses": [
+                {
+                  "_links": {
+                    "self": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/200",
+                      "name": "200",
+                      "title": "200"
+                    },
+                    "methodresponse:delete": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/200"
+                    },
+                    "methodresponse:update": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/200"
+                    }
+                  },
+                  "responseModels": {
+                    "application/json": "ExampleResponseModel"
+                  },
+                  "responseParameters": {
+                    "method.response.header.xxx-response-header": false,
+                    "method.response.header.xxx-more": false
+                  },
+                  "statusCode": "200"
+                },
+                {
+                  "_links": {
+                    "self": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/400",
+                      "name": "400",
+                      "title": "400"
+                    },
+                    "methodresponse:delete": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/400"
+                    },
+                    "methodresponse:update": {
+                      "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/responses/400"
+                    }
+                  },
+                  "responseModels": {
+                    "application/json": "Error"
+                  },
+                  "statusCode": "400"
+                }
+              ]
+            }
           }
         },
         "integration": {
           "lambda": {
             "file": "api/example.js",
             "Handler": "api/example.put"
+          },
+          "responses": {
+            "200": {
+              "responseParameters": {
+                "method.response.header.xxx-response-header": "integration.response.header.xxx",
+                "method.response.header.xxx-more": "integration.response.header.more"
+              },
+              "responseTemplates": {
+                "application/json": null
+              }
+            },
+            "400": {
+              "selectionPattern": "Ex*",
+              "responseTemplates": {
+                "application/json": null
+              },
+              "statusCode": "400",
+              "_log": {
+                "created": {
+                  "at": "2015-11-12T21:27:11.858Z"
+                }
+              }
+            }
           },
           "type": "AWS",
           "httpMethod": "PUT",
@@ -276,42 +420,6 @@
             "created": {
               "at": "2015-11-12T17:12:52.376Z"
             }
-          },
-          "_aws": {
-            "_links": {
-              "curies": [
-                {
-                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-{rel}.html",
-                  "name": "integration",
-                  "templated": true
-                },
-                {
-                  "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-integration-response-{rel}.html",
-                  "name": "integrationresponse",
-                  "templated": true
-                }
-              ],
-              "self": {
-                "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
-              },
-              "integration:delete": {
-                "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
-              },
-              "integration:update": {
-                "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration"
-              },
-              "integrationresponse:put": {
-                "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT/integration/responses/{status_code}",
-                "templated": true
-              }
-            },
-            "cacheKeyParameters": [],
-            "cacheNamespace": "vuv1hy",
-            "httpMethod": "PUT",
-            "requestParameters": {},
-            "requestTemplates": {},
-            "type": "AWS",
-            "uri": "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put/invocations"
           },
           "_permission": {
             "Condition": {
@@ -333,18 +441,6 @@
       },
       "_aws": {
         "_links": {
-          "curies": [
-            {
-              "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-method-{rel}.html",
-              "name": "method",
-              "templated": true
-            },
-            {
-              "href": "http://docs.aws.amazon.com/apigateway/latest/developerguide/restapi-resource-{rel}.html",
-              "name": "resource",
-              "templated": true
-            }
-          ],
           "self": {
             "href": "/restapis/h5mw6hmp26/resources/vuv1hy"
           },
@@ -362,13 +458,13 @@
           "resource:delete": {
             "href": "/restapis/h5mw6hmp26/resources/vuv1hy"
           },
-          "resource:update": {
-            "href": "/restapis/h5mw6hmp26/resources/vuv1hy"
-          },
           "resource:methods": {
             "href": "/restapis/h5mw6hmp26/resources/vuv1hy/methods/PUT",
             "name": "PUT",
             "title": "PUT"
+          },
+          "resource:update": {
+            "href": "/restapis/h5mw6hmp26/resources/vuv1hy"
           }
         },
         "id": "vuv1hy",
