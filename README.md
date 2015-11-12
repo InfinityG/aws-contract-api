@@ -13,10 +13,10 @@ from https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#la
 aws lambda add-permission \
 --region eu-west-1 \
 --function-name v0--contract-api--api--example_js--put \
---statement-id xxxx \
+--statement-id xxxxx \
 --principal apigateway.amazonaws.com \
 --action lambda:InvokeFunction \
---source-arn arn:aws:apigateway:eu-west-1::xnzgnu8195:/examples \
+--source-arn arn:aws:apigateway:eu-west-1::xt6hbyr9q1:/examples \
 --profile developer
 
 ```

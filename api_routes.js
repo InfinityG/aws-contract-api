@@ -11,6 +11,7 @@ module.exports = {
         // requestModels: {},
         requestModels: {
           'application/json': 'ExampleRequestModel'
+          // 'application/json': 'Empty'
         },
 
         responses: {
@@ -32,6 +33,13 @@ module.exports = {
 
       },
       integration: {
+
+        // arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put/invocations
+        // arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put/invocations
+
+        // arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put
+        // arn:aws:lambda:eu-west-1:217750571380:function:v0--contract-api--api--example_js--put
+
         lambda: {
           file: 'api/example.js',
           Handler: 'api/example.put',
