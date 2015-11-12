@@ -27,7 +27,7 @@ module.exports = {
             responseModels: {
               'application/json': 'Error'
             }
-          },
+          }
         }
 
       },
@@ -39,7 +39,7 @@ module.exports = {
       }
     },
 
-    GET: {}
+    // GET: {}
   },
 
   // '/examples/{example_id}': {
