@@ -26,7 +26,7 @@ module.exports = {
           },
           400: {
             responseModels: {
-              'application/json': 'Error'
+              // 'application/json': 'Error'
             }
           }
         }
@@ -57,7 +57,7 @@ module.exports = {
           400: {
             selectionPattern: 'Ex*',
             responseTemplates: {
-              'application/json': null
+              // 'application/json': null
             }
           }
         }

@@ -17,21 +17,8 @@
   },
   "homepage": "https://github.com/InfinityG/aws-contract-api",
   "devDependencies": {
-    "adm-zip": "^0.4.7",
-    "aws4": "^1.1.0",
-    "bluebird": "^3.0.2",
-    "commander": "^2.9.0",
-    "debug": "^2.2.0",
-    "dotenv": "^1.2.0",
-    "dotenv-safe": "^1.0.2",
-    "fast-json-patch": "^0.5.4",
-    "hash.js": "^1.0.3",
-    "ini": "^1.3.4",
-    "md5": "^2.0.0",
-    "mkdirp": "^0.5.1",
+    "aws-deploy": "consent-global/aws-deploy",
     "mocha": "^2.3.3",
-    "osenv": "^0.1.3",
-    "request": "^2.65.0",
     "should": "^7.1.1"
   }
 }
