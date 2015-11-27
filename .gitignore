@@ -31,7 +31,7 @@ build/Release
 node_modules/*
 
 .env.*
-!.env.sample
+!.env.example
 
 api_deployed_*
 !api_deployed_production.json
